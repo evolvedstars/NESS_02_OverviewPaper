@@ -13,7 +13,7 @@ def texify(nums, decimals = 2):
     exponent = [int(exp) for exp in me[:, 1]]
     return np.array(['$' + str(m) + '\\times 10^{' + str(e) + '}$' if e != 0 else str(m) for m, e in zip(mantissa, exponent)])
 
-def setPlotParams():
+def setPlotParams(use_tex = True):
     #the latex preamble setup here may result in errors for some.
     plt.figure(figsize = (8, 8))
     params = {'legend.fontsize': 'x-large',
@@ -21,15 +21,15 @@ def setPlotParams():
               'axes.titlesize':20,
               'xtick.labelsize':20,
               'ytick.labelsize':20}
-    try:
+    if use_tex:
         params['text.usetex'] = True
         params['text.latex.preamble'] = r'\usepackage{bm}'
         plt.rcParams.update(params)
-    except:
-        plr.rcParams.update(params)
+    else:
+        plt.rcParams.update(params)
     return plt
 
-def NESS_DPR_density(infile = 'NESS_Table1_scaled_newer.vot'):
+def NESS_DPR_density(infile = 'NESS_Table1_scaled_newer.vot', use_tex = True):
     """
         Reproduce Figure 9 and Table 4 from Scicluna et al. (2021)
         Required input: VOTable containing data for Table 1 from the paper
@@ -41,7 +41,7 @@ def NESS_DPR_density(infile = 'NESS_Table1_scaled_newer.vot'):
         ktiers.append(np.nonzero(t['sample'] == tier)[0])
 
     """ Figure 9 from the paper """
-    plt = setPlotParams()
+    plt = setPlotParams(use_tex = use_tex)
     logdpr = [np.log10(t['GRAMS_DPR'][k]) for k in ktiers]
     _ = plt.boxplot(logdpr, meanline = True, showmeans = True, labels = tiers, whis = (2.5, 97.5))
     try:
