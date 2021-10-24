@@ -29,10 +29,10 @@ def preptables():
     t3.rename_columns(cols[k].tolist(), newcols.tolist())
     t3['IRASPSC'] = [tt['IRASPSC'].replace('IRAS', '') for tt in t3]
     desc = ['IRAS PSC identifier', \
-            'JCMT/SCUBA2 450 um continuum flux', 'uncertainty in JCMT/SCUBA2 450 um continuum flux', \
-            'JCMT/SCUBA2 450 um continuum flux quality flag (-1 if flux is 3\sigma upper limit)', \
-            'JCMT/SCUBA2 850 um continuum flux', 'uncertainty in JCMT/SCUBA2 850 um continuum flux', \
-            'JCMT/SCUBA2 850 um continuum flux quality flag (-1 if flux is 3\sigma upper limit)', \
+            'JCMT/SCUBA2 450 um flux', 'uncertainty in JCMT/SCUBA2 450 um flux', \
+            'JCMT/SCUBA2 450 um flux quality flag (-1 if flux is 3\sigma upper limit)', \
+            'JCMT/SCUBA2 850 um flux', 'uncertainty in JCMT/SCUBA2 850 um flux', \
+            'JCMT/SCUBA2 850 um flux quality flag (-1 if flux is 3\sigma upper limit)', \
             'spectral index (see Section 4.4 in paper)', 'lower bound of 68\% confidence interval for spectral index', \
             'upper bound of 68\% confidence interval for spectral index', \
             'quality flag for confidence interval (-99, 0, 1)']
@@ -121,6 +121,5 @@ tmkr.keywords = "surveys – catalogues – stars: AGB and post-AGB – stars: m
 tmkr.addTable(table1, name='table1.mrt', description='machine-readable table')
 tmkr.addTable(table3, name='table3.mrt', description='machine-readable table')
 tmkr.addTable(table5, name='table5.mrt', description='machine-readable table')
-
 tmkr.toMRT()
 tmkr.makeReadMe()
