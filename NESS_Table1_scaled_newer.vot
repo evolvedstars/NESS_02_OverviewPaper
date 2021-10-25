@@ -3,18 +3,18 @@
      http://www.astropy.org/ -->
 <VOTABLE version="1.4" xmlns="http://www.ivoa.net/xml/VOTable/v1.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.4">
  <RESOURCE type="results">
-  <TABLE ID="result_S1635044428314" name="result_S1635044428314">
+  <TABLE ID="result_S1635132303800" name="result_S1635132303800">
    <FIELD ID="IRASPSC" arraysize="11" datatype="char" name="IRASPSC" unit="-">
     <DESCRIPTION>
      IRAS PSC identifier
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="ID_SIM" arraysize="24" datatype="unicodeChar" name="ID_SIM" unit="-">
+   <FIELD ID="SIMBAD_ID" arraysize="24" datatype="unicodeChar" name="SIMBAD_ID" unit="-">
     <DESCRIPTION>
      SIMBAD main identifier
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="TMASS_Designation" arraysize="16" datatype="unicodeChar" name="TMASS_Designation" unit="-">
+   <FIELD ID="TMASS_ID" arraysize="16" datatype="unicodeChar" name="TMASS_ID" unit="-">
     <DESCRIPTION>
      2MASS PSC designation
     </DESCRIPTION>
@@ -34,7 +34,7 @@
      Distance estimate to source
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="EDIST_BEST" datatype="double" name="EDIST_BEST" unit="kpc">
+   <FIELD ID="DIST_BEST_err" datatype="double" name="DIST_BEST_err" unit="kpc">
     <DESCRIPTION>
      Uncertainty in distance estimate
     </DESCRIPTION>
@@ -46,7 +46,12 @@
      distance)
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="ISO_TDT" datatype="long" name="ISO_TDT" unit="-">
+   <FIELD ID="DIST_BEST_ref" arraysize="20" datatype="unicodeChar" name="DIST_BEST_ref" unit="-">
+    <DESCRIPTION>
+     Reference(s) for distance (see table1_refs.mrt for bibcodes)
+    </DESCRIPTION>
+   </FIELD>
+   <FIELD ID="ISO_ID" datatype="long" name="ISO_ID" unit="-">
     <DESCRIPTION>
      ISO identifier
     </DESCRIPTION>
@@ -71,7 +76,7 @@
      GRAMS best-fit dust-production rate
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="GRAMS_eDPR" datatype="double" name="GRAMS_eDPR" unit="solMass.yr-1">
+   <FIELD ID="GRAMS_DPR_err" datatype="double" name="GRAMS_DPR_err" unit="solMass.yr-1">
     <DESCRIPTION>
      Uncertainty in GRAMS best-fit DPR
     </DESCRIPTION>
@@ -91,22 +96,22 @@
      GRAMS star+dust flux prediction at 850 um
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="RA_SIM" datatype="double" name="RA_SIM" ucd="pos.eq.ra;meta.main" unit="deg">
+   <FIELD ID="SIMBAD_RA" datatype="double" name="SIMBAD_RA" ucd="pos.eq.ra;meta.main" unit="deg">
     <DESCRIPTION>
      Right ascension
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="DEC_SIM" datatype="double" name="DEC_SIM" ucd="pos.eq.dec;meta.main" unit="deg">
+   <FIELD ID="SIMBAD_DEC" datatype="double" name="SIMBAD_DEC" ucd="pos.eq.dec;meta.main" unit="deg">
     <DESCRIPTION>
      Declination
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="RA_IRAS" datatype="double" name="RA_IRAS" ucd="pos.eq.ra" unit="deg">
+   <FIELD ID="IRAS_RA" datatype="double" name="IRAS_RA" ucd="pos.eq.ra" unit="deg">
     <DESCRIPTION>
      ? RA degrees (J2000)
     </DESCRIPTION>
    </FIELD>
-   <FIELD ID="DEC_IRAS" datatype="double" name="DEC_IRAS" ucd="pos.eq.dec" unit="deg">
+   <FIELD ID="IRAS_DEC" datatype="double" name="IRAS_DEC" ucd="pos.eq.dec" unit="deg">
     <DESCRIPTION>
      ? DEC degrees (J2000)
     </DESCRIPTION>
@@ -120,8 +125,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.53639009</TD>
-      <TD/>
+      <TD>0.1340975225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>78201008</TD>
       <TD>E</TD>
       <TD>7</TD>
@@ -143,8 +149,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.289017337854007</TD>
-      <TD>0.06515419394124651</TD>
+      <TD>0.01883069168292274</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -166,8 +173,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.137174211966088</TD>
-      <TD>0.005268693938111077</TD>
+      <TD>0.0007227289390508919</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>55502138</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -189,8 +197,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.270270266787165</TD>
-      <TD>0.03433162654629746</TD>
+      <TD>0.00927881786590513</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>37801819</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -212,8 +221,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.91513115</TD>
-      <TD/>
+      <TD>0.2287827875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>54900858</TD>
       <TD>E</TD>
       <TD>4.SEC:</TD>
@@ -235,8 +245,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.28980345</TD>
-      <TD/>
+      <TD>0.0724508625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>40201208</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -258,8 +269,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.42712767</TD>
-      <TD/>
+      <TD>0.1067819175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>40201723</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -281,8 +293,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.45429262</TD>
-      <TD/>
+      <TD>0.113573155</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -304,8 +317,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.93703953</TD>
-      <TD/>
+      <TD>0.2342598825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -327,8 +341,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.236966836425976</TD>
-      <TD>0.03144583728484833</TD>
+      <TD>0.007451620580156511</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -350,8 +365,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.138504159149492</TD>
-      <TD>0.009783535159179443</TD>
+      <TD>0.00135506031073164</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -373,8 +389,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1052817</TD>
-      <TD/>
+      <TD>0.276320425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -396,8 +413,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.238095248907873</TD>
-      <TD>0.016439910837691734</TD>
+      <TD>0.003914264662923453</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -419,8 +437,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.45196747</TD>
-      <TD/>
+      <TD>0.1129918675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>76101413</TD>
       <TD>E</TD>
       <TD>3.SB</TD>
@@ -442,8 +461,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.060532685973991</TD>
-      <TD>0.002051955460567506</TD>
+      <TD>0.0001242103755271489</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>79501002</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -465,8 +485,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.94113219</TD>
-      <TD/>
+      <TD>0.2352830475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -488,8 +509,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.348432069642817</TD>
-      <TD>0.06677269786499883</TD>
+      <TD>0.023265749312736048</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -511,8 +533,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.59295626</TD>
-      <TD/>
+      <TD>0.148239065</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>41602133</TD>
       <TD>E</TD>
       <TD>3.SEp</TD>
@@ -534,8 +557,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.91506155</TD>
-      <TD/>
+      <TD>0.2287653875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -557,8 +581,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.265957447483076</TD>
-      <TD>0.05305002437132474</TD>
+      <TD>0.014109049070712502</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>24701012</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -580,8 +605,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.071633237626605</TD>
-      <TD>0.001744649109378499</TD>
+      <TD>0.0001249748642271548</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>54901434</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -603,8 +629,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.88466911</TD>
-      <TD/>
+      <TD>0.2211672775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>78800604</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -626,8 +653,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55758719</TD>
-      <TD/>
+      <TD>0.1393967975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>80501620</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -649,8 +677,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.277008318298983</TD>
-      <TD>0.06215422287858154</TD>
+      <TD>0.017217236754776048</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -672,8 +701,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.104821803354155</TD>
-      <TD>0.0020876460532478474</TD>
+      <TD>0.00021883082406662366</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -695,8 +725,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.174216034821409</TD>
-      <TD>0.02397746981720358</TD>
+      <TD>0.004177259716603222</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -718,8 +749,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.1459854034923</TD>
-      <TD>0.006606638741063541</TD>
+      <TD>0.0009644728223420219</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -741,8 +773,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.41410201</TD>
-      <TD/>
+      <TD>0.1035255025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -764,8 +797,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.42909837</TD>
-      <TD/>
+      <TD>0.1072745925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -787,8 +821,9 @@
       <TD>high</TD>
       <TD>1</TD>
       <TD>0.091659029696247</TD>
-      <TD>0.010249681238070291</TD>
+      <TD>0.0009394758369773504</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>45101201</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -810,8 +845,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79637825</TD>
-      <TD/>
+      <TD>0.1990945625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>43306303</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -833,8 +869,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.58127968</TD>
-      <TD/>
+      <TD>0.14531992</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>43306550</TD>
       <TD>E</TD>
       <TD>3.SE</TD>
@@ -856,8 +893,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1317146</TD>
-      <TD/>
+      <TD>0.28292865</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -879,8 +917,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.88687497</TD>
-      <TD/>
+      <TD>0.2217187425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>61702702</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -902,8 +941,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.16129032754253</TD>
-      <TD>0.011706555682430179</TD>
+      <TD>0.0018881542004140293</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -925,8 +965,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.40247816</TD>
-      <TD/>
+      <TD>0.10061954</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -948,8 +989,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.59600289</TD>
-      <TD/>
+      <TD>0.1490007225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -971,8 +1013,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.193798</TD>
-      <TD/>
+      <TD>0.0484495</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -994,8 +1037,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.57918258</TD>
-      <TD/>
+      <TD>0.144795645</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>44202463</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -1017,8 +1061,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.45782098</TD>
-      <TD/>
+      <TD>0.114455245</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>75600502</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -1040,8 +1085,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.256410250140208</TD>
-      <TD>0.032215644892285504</TD>
+      <TD>0.008260421565259041</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1063,8 +1109,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.51591655</TD>
-      <TD/>
+      <TD>0.1289791375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1086,8 +1133,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.78984378</TD>
-      <TD/>
+      <TD>0.197460945</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>63702662</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -1109,8 +1157,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.49919325</TD>
-      <TD/>
+      <TD>0.1247983125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1132,8 +1181,9 @@
       <TD>high</TD>
       <TD>1</TD>
       <TD>0.210084023511677</TD>
-      <TD>0.04281124066410999</TD>
+      <TD>0.008993957690242945</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1155,8 +1205,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.5526225</TD>
-      <TD/>
+      <TD>0.138155625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1178,8 +1229,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.076394193150739</TD>
-      <TD>0.0025678718856232178</TD>
+      <TD>0.00019617050081665249</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>79702803</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -1201,8 +1253,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.094339619246443</TD>
-      <TD>0.002224990877397023</TD>
+      <TD>0.0002099047922004443</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>79501105</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -1224,8 +1277,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.66108938</TD>
-      <TD/>
+      <TD>0.165272345</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1247,8 +1301,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.321543419206189</TD>
-      <TD>0.03825436292598632</TD>
+      <TD>0.012300438654776116</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -1270,8 +1325,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4071938</TD>
-      <TD/>
+      <TD>0.60179845</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1293,8 +1349,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.61635619</TD>
-      <TD/>
+      <TD>0.1540890475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1316,8 +1373,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.093370681273407</TD>
-      <TD>0.004707765509584864</TD>
+      <TD>0.00043956727290538685</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1339,8 +1397,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.166389344744842</TD>
-      <TD>0.006921353568471356</TD>
+      <TD>0.0011516394850053227</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1362,8 +1421,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2</TD>
-      <TD/>
+      <TD>0.3807692307692308</TD>
       <TD>M</TD>
+      <TD>2</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -1385,8 +1445,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.55957263</TD>
-      <TD/>
+      <TD>0.1398931575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>81002351</TD>
       <TD>C</TD>
       <TD>3.CE</TD>
@@ -1408,8 +1469,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.5523052</TD>
-      <TD/>
+      <TD>0.1380763</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1431,8 +1493,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1073372</TD>
-      <TD/>
+      <TD>0.2768343</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1454,8 +1517,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.51693346</TD>
-      <TD/>
+      <TD>0.129233365</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1477,8 +1541,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53163252</TD>
-      <TD/>
+      <TD>0.13290813</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>64001445</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -1500,8 +1565,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.159235663469909</TD>
-      <TD>0.008621038640323268</TD>
+      <TD>0.0013727768076915977</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1523,8 +1589,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.259740266174224</TD>
-      <TD>0.033057855365997355</TD>
+      <TD>0.008586456151913153</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1546,8 +1613,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83442189</TD>
-      <TD/>
+      <TD>0.2086054725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1569,8 +1637,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.243902444697646</TD>
-      <TD>0.027364665688297502</TD>
+      <TD>0.006674308859709552</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1592,8 +1661,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.065616798885728</TD>
-      <TD>0.00047361206368380627</TD>
+      <TD>3.1076907532594916e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1615,8 +1685,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.319488806210034</TD>
-      <TD>0.05511947417355577</TD>
+      <TD>0.017610055002634132</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1638,8 +1709,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1719937</TD>
-      <TD/>
+      <TD>0.292998425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -1661,8 +1733,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55981134</TD>
-      <TD/>
+      <TD>0.139952835</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1684,8 +1757,9 @@
       <TD>high</TD>
       <TD>1</TD>
       <TD>0.19306063</TD>
-      <TD/>
+      <TD>0.0482651575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1707,8 +1781,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1410298</TD>
-      <TD/>
+      <TD>0.28525745</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1730,8 +1805,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.062344136092409</TD>
-      <TD>0.0022543388574399743</TD>
+      <TD>0.00014054480852664357</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1753,8 +1829,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.143884896035089</TD>
-      <TD>0.002277315047039484</TD>
+      <TD>0.00032767123878241997</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -1776,8 +1853,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.29222861</TD>
-      <TD/>
+      <TD>0.0730571525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1799,8 +1877,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.87449716</TD>
-      <TD/>
+      <TD>0.21862429</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1822,8 +1901,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.38117167</TD>
-      <TD/>
+      <TD>0.0952929175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1845,8 +1925,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.41416399</TD>
-      <TD/>
+      <TD>0.1035409975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1868,8 +1949,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.48322922</TD>
-      <TD/>
+      <TD>0.120807305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>86202101</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -1891,8 +1973,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.92730434</TD>
-      <TD/>
+      <TD>0.231826085</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -1914,8 +1997,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.87153093</TD>
-      <TD/>
+      <TD>0.2178827325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -1937,8 +2021,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.054614966093257</TD>
-      <TD>0.002952966699369044</TD>
+      <TD>0.00016127617616055738</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>58900918</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -1960,8 +2045,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.5288805</TD>
-      <TD/>
+      <TD>0.132220125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -1983,8 +2069,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.66664293</TD>
-      <TD/>
+      <TD>0.1666607325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2006,8 +2093,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.63773692</TD>
-      <TD/>
+      <TD>0.15943423</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>86301602</TD>
       <TD>H</TD>
       <TD>4.CN</TD>
@@ -2029,8 +2117,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.84642383</TD>
-      <TD/>
+      <TD>0.2116059575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2052,8 +2141,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.259067364553691</TD>
-      <TD>0.04698112734684022</TD>
+      <TD>0.012171276845507237</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2075,8 +2165,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52902401</TD>
-      <TD/>
+      <TD>0.1322560025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -2098,8 +2189,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.199600789284432</TD>
-      <TD>0.028286736184952657</TD>
+      <TD>0.005646054868797054</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2121,8 +2213,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.292397654295856</TD>
-      <TD>0.04958790447501895</TD>
+      <TD>0.014499386949942522</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2144,8 +2237,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.30988102</TD>
-      <TD/>
+      <TD>0.077470255</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>69501070</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -2167,8 +2261,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.42998569</TD>
-      <TD/>
+      <TD>0.1074964225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -2190,8 +2285,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.36942263</TD>
-      <TD/>
+      <TD>0.0923556575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2213,8 +2309,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.34678615</TD>
-      <TD/>
+      <TD>0.0866965375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>85801604</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -2236,8 +2333,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.54505111</TD>
-      <TD/>
+      <TD>0.1362627775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2259,8 +2357,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.39247418</TD>
-      <TD/>
+      <TD>0.098118545</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2282,8 +2381,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.98532291</TD>
-      <TD/>
+      <TD>0.2463307275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>86201803</TD>
       <TD>E</TD>
       <TD>3.SB</TD>
@@ -2305,8 +2405,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.149031295725023</TD>
-      <TD>0.009772543435885224</TD>
+      <TD>0.0014564148107790431</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2328,8 +2429,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.45740967</TD>
-      <TD/>
+      <TD>0.1143524175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2351,8 +2453,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.63924145</TD>
-      <TD/>
+      <TD>0.1598103625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2374,8 +2477,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.7382807</TD>
-      <TD/>
+      <TD>0.684570175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2397,8 +2501,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.31703116</TD>
-      <TD/>
+      <TD>0.07925779</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2420,8 +2525,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1060344</TD>
-      <TD/>
+      <TD>0.2765086</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2443,8 +2549,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73810037</TD>
-      <TD/>
+      <TD>0.1845250925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2466,8 +2573,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.199203188007868</TD>
-      <TD>0.014682307123405704</TD>
+      <TD>0.0029247623862930457</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2489,8 +2597,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9429389</TD>
-      <TD/>
+      <TD>0.485734725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>82901301</TD>
       <TD>L</TD>
       <TD>4.PN</TD>
@@ -2512,8 +2621,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.288184435664259</TD>
-      <TD>0.022423574220836746</TD>
+      <TD>0.006462125082407464</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2535,8 +2645,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.33635709</TD>
-      <TD/>
+      <TD>0.0840892725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2558,8 +2669,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.155763238024331</TD>
-      <TD>0.014799934087661892</TD>
+      <TD>0.0023052856560408894</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2581,8 +2693,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.549450533615479</TD>
-      <TD>0.07849292869509666</TD>
+      <TD>0.043127981556562604</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2604,8 +2717,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.289017337854007</TD>
-      <TD>0.05596578490151673</TD>
+      <TD>0.016175082163146344</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -2627,8 +2741,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.60843252</TD>
-      <TD/>
+      <TD>0.15210813</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2650,8 +2765,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.46966249</TD>
-      <TD/>
+      <TD>0.1174156225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2673,8 +2789,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.93513231</TD>
-      <TD/>
+      <TD>0.2337830775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2696,8 +2813,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55583801</TD>
-      <TD/>
+      <TD>0.1389595025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2719,8 +2837,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83991613</TD>
-      <TD/>
+      <TD>0.2099790325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2742,8 +2861,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7075442</TD>
-      <TD/>
+      <TD>0.42688605</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -2765,8 +2885,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.58758384</TD>
-      <TD/>
+      <TD>0.14689596</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2788,8 +2909,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7137301</TD>
-      <TD/>
+      <TD>0.428432525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -2811,8 +2933,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3987625</TD>
-      <TD/>
+      <TD>0.349690625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>75002201</TD>
       <TD>H</TD>
       <TD>5.E</TD>
@@ -2834,8 +2957,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.8092552</TD>
-      <TD/>
+      <TD>0.4523138</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>62804104</TD>
       <TD>H</TD>
       <TD>5.UE</TD>
@@ -2857,8 +2981,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.065747</TD>
-      <TD/>
+      <TD>0.26643675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2880,8 +3005,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1486418</TD>
-      <TD/>
+      <TD>0.28716045</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -2903,8 +3029,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.45279463</TD>
-      <TD/>
+      <TD>0.1131986575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -2926,8 +3053,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.50673051</TD>
-      <TD/>
+      <TD>0.1266826275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2949,8 +3077,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.9454628</TD>
-      <TD/>
+      <TD>0.2363657</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -2972,8 +3101,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.152671751279416</TD>
-      <TD>0.019346190664533285</TD>
+      <TD>0.0029536168093397858</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>69201980</TD>
       <TD>E</TD>
       <TD>2.SEcp</TD>
@@ -2995,8 +3125,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.32994592</TD>
-      <TD/>
+      <TD>0.08248648</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3018,8 +3149,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.49581566</TD>
-      <TD/>
+      <TD>0.123953915</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3041,8 +3173,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0618961</TD>
-      <TD/>
+      <TD>0.265474025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3064,8 +3197,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1237519</TD>
-      <TD/>
+      <TD>0.280937975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>87102906</TD>
       <TD>E</TD>
       <TD>7</TD>
@@ -3087,8 +3221,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.55860496</TD>
-      <TD/>
+      <TD>0.13965124</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3110,8 +3245,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.230414738442742</TD>
-      <TD>0.032916389244136285</TD>
+      <TD>0.007584421218167148</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>83802031</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -3133,8 +3269,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.38178992</TD>
-      <TD/>
+      <TD>0.09544748</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3156,8 +3293,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.90177663</TD>
-      <TD/>
+      <TD>0.2254441575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -3179,8 +3317,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.278551538693111</TD>
-      <TD>0.024053197628219874</TD>
+      <TD>0.006700055209830134</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -3202,8 +3341,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.203252029368516</TD>
-      <TD>0.026026173901345782</TD>
+      <TD>0.005289872662146438</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3225,8 +3365,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.87896315</TD>
-      <TD/>
+      <TD>0.2197407875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -3248,8 +3389,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.152671751279416</TD>
-      <TD>0.004428646021474782</TD>
+      <TD>0.0006761291438951732</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -3271,8 +3413,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.48389421</TD>
-      <TD/>
+      <TD>0.1209735525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3294,8 +3437,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.57597587</TD>
-      <TD/>
+      <TD>0.1439939675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3317,8 +3461,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73597359</TD>
-      <TD/>
+      <TD>0.1839933975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>70201801</TD>
       <TD>P</TD>
       <TD>4.U/SC</TD>
@@ -3340,8 +3485,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6898006</TD>
-      <TD/>
+      <TD>0.42245015</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3363,8 +3509,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.071022727657571</TD>
-      <TD>0.0035814017738308277</TD>
+      <TD>0.0002543609228151286</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -3386,8 +3533,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.58425195</TD>
-      <TD/>
+      <TD>0.1460629875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -3409,8 +3557,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.99956956</TD>
-      <TD/>
+      <TD>0.24989239</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3432,8 +3581,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73369422</TD>
-      <TD/>
+      <TD>0.183423555</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3455,8 +3605,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.44112046</TD>
-      <TD/>
+      <TD>0.110280115</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3478,8 +3629,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0877969</TD>
-      <TD/>
+      <TD>0.271949225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3501,8 +3653,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.57411643</TD>
-      <TD/>
+      <TD>0.1435291075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3524,8 +3677,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.330033006416607</TD>
-      <TD>0.051193239755220526</TD>
+      <TD>0.016895458824621595</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3547,8 +3701,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.32340669</TD>
-      <TD/>
+      <TD>0.0808516725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -3570,8 +3725,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.41174338</TD>
-      <TD/>
+      <TD>0.102935845</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -3593,8 +3749,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.98115392</TD>
-      <TD/>
+      <TD>0.24528848</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -3616,8 +3773,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.59016549</TD>
-      <TD/>
+      <TD>0.1475413725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3639,8 +3797,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.786</TD>
-      <TD/>
+      <TD>0.037133858267716535</TD>
       <TD>M</TD>
+      <TD>3</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3662,8 +3821,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55305885</TD>
-      <TD/>
+      <TD>0.1382647125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -3685,8 +3845,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1104678</TD>
-      <TD/>
+      <TD>0.27761695</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3708,8 +3869,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.91579932</TD>
-      <TD/>
+      <TD>0.22894983</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3733,6 +3895,7 @@
       <TD>0.340136047801789</TD>
       <TD>0.04743393798392291</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3754,8 +3917,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53430537</TD>
-      <TD/>
+      <TD>0.1335763425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -3777,8 +3941,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1948771</TD>
-      <TD/>
+      <TD>0.298719275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3800,8 +3965,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.53408036</TD>
-      <TD/>
+      <TD>0.13352009</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3823,8 +3989,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.45987784</TD>
-      <TD/>
+      <TD>0.11496946</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -3846,8 +4013,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.57248921</TD>
-      <TD/>
+      <TD>0.1431223025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3869,8 +4037,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.31019482</TD>
-      <TD/>
+      <TD>0.077548705</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -3892,8 +4061,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.86185137</TD>
-      <TD/>
+      <TD>0.2154628425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -3915,8 +4085,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0428235</TD>
-      <TD/>
+      <TD>0.260705875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -3938,8 +4109,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.165837473500151</TD>
-      <TD>0.02062655110456584</TD>
+      <TD>0.0034206551222029473</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -3961,8 +4133,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.13545122</TD>
-      <TD/>
+      <TD>0.033862805</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -3984,8 +4157,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65926756</TD>
-      <TD/>
+      <TD>0.16481689</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4007,8 +4181,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.25008373</TD>
-      <TD/>
+      <TD>0.0625209325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4030,8 +4205,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.196078435039117</TD>
-      <TD>0.014225298841332395</TD>
+      <TD>0.0027892743347722204</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4053,8 +4229,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.153139351894347</TD>
-      <TD>0.005862915309269133</TD>
+      <TD>0.0008978430506729199</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4076,8 +4253,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.15705424</TD>
-      <TD/>
+      <TD>0.03926356</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>73103039</TD>
       <TD>E</TD>
       <TD>3.SB:</TD>
@@ -4099,8 +4277,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0057672</TD>
-      <TD/>
+      <TD>0.2514418</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4122,8 +4301,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.253164553905867</TD>
-      <TD>0.060887675516060176</TD>
+      <TD>0.015414601210388556</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4145,8 +4325,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.059382422264784</TD>
-      <TD>0.0016926105186552947</TD>
+      <TD>0.00010051131254860377</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4168,8 +4349,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.50530393</TD>
-      <TD/>
+      <TD>0.1263259825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4191,8 +4373,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.96710583</TD>
-      <TD/>
+      <TD>0.2417764575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4214,8 +4397,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0310205</TD>
-      <TD/>
+      <TD>0.257755125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4237,8 +4421,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.82256323</TD>
-      <TD/>
+      <TD>0.2056408075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -4260,8 +4445,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.236966836425976</TD>
-      <TD>0.012915254599134155</TD>
+      <TD>0.0030604870239928574</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4283,8 +4469,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.010358400564705</TD>
-      <TD>2.8970045414389746e-05</TD>
+      <TD>3.0008333477994423e-07</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4306,8 +4493,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.347222208424851</TD>
-      <TD>0.022907018682578367</TD>
+      <TD>0.007953825615394181</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -4329,8 +4517,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.60674632</TD>
-      <TD/>
+      <TD>0.15168658</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -4352,8 +4541,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.262467195542912</TD>
-      <TD>0.027555610977967934</TD>
+      <TD>0.0072324439348587215</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>72802231</TD>
       <TD>U</TD>
       <TD>2.SEap</TD>
@@ -4375,8 +4565,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.66029989</TD>
-      <TD/>
+      <TD>0.1650749725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4398,8 +4589,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.47702788</TD>
-      <TD/>
+      <TD>0.11925697</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4421,8 +4613,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.5602923</TD>
-      <TD/>
+      <TD>0.140073075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4444,8 +4637,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3721884</TD>
-      <TD/>
+      <TD>0.3430471</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -4467,8 +4661,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.43066769</TD>
-      <TD/>
+      <TD>0.1076669225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4490,8 +4685,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1089257</TD>
-      <TD/>
+      <TD>0.277231425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4513,8 +4709,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.29576595</TD>
-      <TD/>
+      <TD>0.0739414875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4536,8 +4733,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.49205477</TD>
-      <TD/>
+      <TD>0.1230136925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4559,8 +4757,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.72627311</TD>
-      <TD/>
+      <TD>0.1815682775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4582,8 +4781,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.185528761553017</TD>
-      <TD>0.014456786255482593</TD>
+      <TD>0.0026821496500163636</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4605,8 +4805,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.45922088</TD>
-      <TD/>
+      <TD>0.11480522</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4628,8 +4829,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.301204825333612</TD>
-      <TD>0.05262012149437625</TD>
+      <TD>0.01584943450374704</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4651,8 +4853,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56356502</TD>
-      <TD/>
+      <TD>0.140891255</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4674,8 +4877,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.37860356</TD>
-      <TD/>
+      <TD>0.09465089</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4697,8 +4901,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.156249997671694</TD>
-      <TD>0.010009765243012277</TD>
+      <TD>0.001564025795914872</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4720,8 +4925,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.74122958</TD>
-      <TD/>
+      <TD>0.185307395</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4743,8 +4949,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.43892108</TD>
-      <TD/>
+      <TD>0.10973027</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4766,8 +4973,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.213675213675214</TD>
-      <TD>0.018719409745050885</TD>
+      <TD>0.003999873877147631</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4789,8 +4997,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0572905</TD>
-      <TD/>
+      <TD>0.264322625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4812,8 +5021,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.242718453343913</TD>
-      <TD>0.05596663271130767</TD>
+      <TD>0.013584134530555446</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4835,8 +5045,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.96878028</TD>
-      <TD/>
+      <TD>0.24219507</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4858,8 +5069,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.244498768384462</TD>
-      <TD>0.0555950717657385</TD>
+      <TD>0.013592926574968842</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4881,8 +5093,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.143472027274265</TD>
-      <TD>0.010703795162107236</TD>
+      <TD>0.0015356951914359952</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4904,8 +5117,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56334773</TD>
-      <TD/>
+      <TD>0.1408369325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -4927,8 +5141,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.60402678</TD>
-      <TD/>
+      <TD>0.151006695</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -4950,8 +5165,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.149700602649373</TD>
-      <TD>0.003361540603880792</TD>
+      <TD>0.0005032246542312918</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -4973,8 +5189,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.57549115</TD>
-      <TD/>
+      <TD>0.1438727875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -4996,8 +5213,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.30293258</TD>
-      <TD/>
+      <TD>0.075733145</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -5019,8 +5237,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.46105274</TD>
-      <TD/>
+      <TD>0.115263185</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5042,8 +5261,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76438286</TD>
-      <TD/>
+      <TD>0.191095715</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5065,8 +5285,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.38348774</TD>
-      <TD/>
+      <TD>0.095871935</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5088,8 +5309,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.224215244719028</TD>
-      <TD>0.019103540737716272</TD>
+      <TD>0.004283305061506975</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -5111,8 +5333,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.90791182</TD>
-      <TD/>
+      <TD>0.226977955</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5134,8 +5357,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.23192858</TD>
-      <TD/>
+      <TD>0.057982145</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -5159,6 +5383,7 @@
       <TD>0.900900889290549</TD>
       <TD>0.21102182496532484</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -5180,8 +5405,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.70324089</TD>
-      <TD/>
+      <TD>0.1758102225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5203,8 +5429,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.157728702828472</TD>
-      <TD>0.0201514579370973</TD>
+      <TD>0.0031784633205208736</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -5226,8 +5453,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.38472171</TD>
-      <TD/>
+      <TD>0.0961804275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5249,8 +5477,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.5806627</TD>
-      <TD/>
+      <TD>0.145165675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5272,8 +5501,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.071275838847662</TD>
-      <TD>0.013462650292923423</TD>
+      <TD>0.0009595616927408396</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -5295,8 +5525,9 @@
       <TD>high</TD>
       <TD>1</TD>
       <TD>0.075151722</TD>
-      <TD/>
+      <TD>0.0187879305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>19700159</TD>
       <TD>C</TD>
       <TD>3.CR</TD>
@@ -5318,8 +5549,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.37442417</TD>
-      <TD/>
+      <TD>0.0936060425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5341,8 +5573,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.80573076</TD>
-      <TD/>
+      <TD>0.20143269</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5364,8 +5597,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83469403</TD>
-      <TD/>
+      <TD>0.2086735075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -5387,8 +5621,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.357142863224964</TD>
-      <TD>0.07397959400891573</TD>
+      <TD>0.02642128402456456</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -5410,8 +5645,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.31636424</TD>
-      <TD/>
+      <TD>0.07909106</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5433,8 +5669,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5845441</TD>
-      <TD/>
+      <TD>0.396136025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -5456,8 +5693,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7916491</TD>
-      <TD/>
+      <TD>0.447912275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -5479,8 +5717,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5431282</TD>
-      <TD/>
+      <TD>0.38578205</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -5502,8 +5741,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2705823</TD>
-      <TD/>
+      <TD>0.567645575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -5525,8 +5765,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9539031</TD>
-      <TD/>
+      <TD>0.488475775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5548,8 +5789,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.42445782</TD>
-      <TD/>
+      <TD>0.106114455</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5571,8 +5813,9 @@
       <TD>high</TD>
       <TD>1</TD>
       <TD>0.28388531</TD>
-      <TD/>
+      <TD>0.0709713275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -5594,8 +5837,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55799215</TD>
-      <TD/>
+      <TD>0.1394980375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5617,8 +5861,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.219298248365865</TD>
-      <TD>0.01587026952174999</TD>
+      <TD>0.003480322307213947</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -5640,8 +5885,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.201612901675217</TD>
-      <TD>0.003658298885614302</TD>
+      <TD>0.0007375602535239122</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -5663,8 +5909,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.52548912</TD>
-      <TD/>
+      <TD>0.13137228</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5686,8 +5933,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.87354632</TD>
-      <TD/>
+      <TD>0.21838658</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5709,8 +5957,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.070621469687569</TD>
-      <TD>0.002693191810072549</TD>
+      <TD>0.0001901971637778476</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>16000806</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -5732,8 +5981,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.83773722</TD>
-      <TD/>
+      <TD>0.209434305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>25400259</TD>
       <TD>H</TD>
       <TD>4.U/SC</TD>
@@ -5755,8 +6005,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.67700191</TD>
-      <TD/>
+      <TD>0.1692504775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>24900158</TD>
       <TD>H</TD>
       <TD>4.SCp</TD>
@@ -5778,8 +6029,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9790939</TD>
-      <TD/>
+      <TD>0.494773475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5801,8 +6053,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.70202076</TD>
-      <TD/>
+      <TD>0.17550519</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5824,8 +6077,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7108469</TD>
-      <TD/>
+      <TD>0.427711725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5847,8 +6101,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.67437013</TD>
-      <TD/>
+      <TD>0.1685925325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5870,8 +6125,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.268096513374387</TD>
-      <TD>0.03881290255506741</TD>
+      <TD>0.01040560384895341</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -5893,8 +6149,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.208333325054911</TD>
-      <TD>0.009982638285253937</TD>
+      <TD>0.002079716226787408</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -5916,8 +6173,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0681867</TD>
-      <TD/>
+      <TD>0.267046675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5939,8 +6197,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.59263538</TD>
-      <TD/>
+      <TD>0.148158845</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5962,8 +6221,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.69538469</TD>
-      <TD/>
+      <TD>0.1738461725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -5985,8 +6245,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.073938</TD>
-      <TD/>
+      <TD>0.2684845</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6008,8 +6269,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65913085</TD>
-      <TD/>
+      <TD>0.1647827125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6031,8 +6293,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.74358259</TD>
-      <TD/>
+      <TD>0.1858956475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>25901312</TD>
       <TD>U</TD>
       <TD>2.SEc</TD>
@@ -6054,8 +6317,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.14514746</TD>
-      <TD/>
+      <TD>0.036286865</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>7100250</TD>
       <TD>E</TD>
       <TD>4.M:e</TD>
@@ -6077,8 +6341,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4594289</TD>
-      <TD/>
+      <TD>0.614857225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6100,8 +6365,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.28654554</TD>
-      <TD/>
+      <TD>0.071636385</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -6123,8 +6389,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79772429</TD>
-      <TD/>
+      <TD>0.1994310725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6146,8 +6413,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1501528</TD>
-      <TD/>
+      <TD>0.2875382</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6171,6 +6439,7 @@
       <TD>0.343642601548082</TD>
       <TD>0.034246167687729145</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD>26700202</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -6192,8 +6461,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.261096610945193</TD>
-      <TD>0.06476286781824708</TD>
+      <TD>0.01690936530243582</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6215,8 +6485,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79884029</TD>
-      <TD/>
+      <TD>0.1997100725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6238,8 +6509,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55693695</TD>
-      <TD/>
+      <TD>0.1392342375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6261,8 +6533,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.242718453343913</TD>
-      <TD>0.024743143758537135</TD>
+      <TD>0.006005617583938228</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6284,8 +6557,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.8523582</TD>
-      <TD/>
+      <TD>0.46308955</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -6307,8 +6581,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.60821813</TD>
-      <TD/>
+      <TD>0.1520545325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6330,8 +6605,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56060955</TD>
-      <TD/>
+      <TD>0.1401523875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6353,8 +6629,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1500445</TD>
-      <TD/>
+      <TD>0.287511125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -6376,8 +6653,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.336700333456877</TD>
-      <TD>0.05668355505056843</TD>
+      <TD>0.019085371887047634</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>7901133</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -6399,8 +6677,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.75315267</TD>
-      <TD/>
+      <TD>0.1882881675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6422,8 +6701,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1820638</TD>
-      <TD/>
+      <TD>0.29551595</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -6447,6 +6727,7 @@
       <TD>0.64935066543556</TD>
       <TD>0.15601282962917548</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -6468,8 +6749,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52939213</TD>
-      <TD/>
+      <TD>0.1323480325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -6491,8 +6773,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3953284</TD>
-      <TD/>
+      <TD>0.5988321</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -6514,8 +6797,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3913147</TD>
-      <TD/>
+      <TD>0.597828675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -6537,8 +6821,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2155458</TD>
-      <TD/>
+      <TD>0.55388645</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -6560,8 +6845,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.102145</TD>
-      <TD/>
+      <TD>0.02553625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6583,8 +6869,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7374974</TD>
-      <TD/>
+      <TD>0.18437435</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6606,8 +6893,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.60299835</TD>
-      <TD/>
+      <TD>0.1507495875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -6629,8 +6917,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.152439025719913</TD>
-      <TD>0.008365556829685657</TD>
+      <TD>0.0012752373327218455</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6652,8 +6941,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.0035051</TD>
-      <TD/>
+      <TD>0.250876275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -6675,8 +6965,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.55739145</TD>
-      <TD/>
+      <TD>0.1393478625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -6698,8 +6989,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.226244339986182</TD>
-      <TD>0.019962734691261995</TD>
+      <TD>0.004516455734543829</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6721,8 +7013,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.94553911</TD>
-      <TD/>
+      <TD>0.2363847775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6744,8 +7037,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.241545901509627</TD>
-      <TD>0.0425914289209116</TD>
+      <TD>0.010287785095284791</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6767,8 +7061,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.16722407973419</TD>
-      <TD>0.007550251400031354</TD>
+      <TD>0.001262583842132023</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6790,8 +7085,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56184873</TD>
-      <TD/>
+      <TD>0.1404621825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6813,8 +7109,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.13210039330561</TD>
-      <TD>0.01710150327477527</TD>
+      <TD>0.00225911530871499</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -6836,8 +7133,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.5851566</TD>
-      <TD/>
+      <TD>0.14628915</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -6859,8 +7157,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1700862</TD>
-      <TD/>
+      <TD>0.29252155</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6882,8 +7181,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.35587189336767</TD>
-      <TD>0.07978622761898559</TD>
+      <TD>0.028393675887432284</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -6905,8 +7205,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.271002705824689</TD>
-      <TD>0.033783534557965</TD>
+      <TD>0.009155429277530403</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6928,8 +7229,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.358422943968728</TD>
-      <TD>0.059094822915666215</TD>
+      <TD>0.021180940402743733</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6951,8 +7253,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.092421444381219</TD>
-      <TD>0.001452093065637309</TD>
+      <TD>0.00013420453850215234</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -6974,8 +7277,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.92598534</TD>
-      <TD/>
+      <TD>0.231496335</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -6997,8 +7301,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.263157898039039</TD>
-      <TD>0.02285318771918449</TD>
+      <TD>0.00601399684367217</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -7020,8 +7325,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.55247394</TD>
-      <TD/>
+      <TD>0.138118485</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7043,8 +7349,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.88110922</TD>
-      <TD/>
+      <TD>0.220277305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7066,8 +7373,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.135869562752644</TD>
-      <TD>0.005907371897473086</TD>
+      <TD>0.0008026320367269252</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -7089,8 +7397,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79531316</TD>
-      <TD/>
+      <TD>0.19882829</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7112,8 +7421,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.180831819540683</TD>
-      <TD>0.022236100660837747</TD>
+      <TD>0.004020994541989073</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -7135,8 +7445,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.091741747</TD>
-      <TD/>
+      <TD>0.02293543675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>25806177</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -7158,8 +7469,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.336700333456877</TD>
-      <TD>0.03627747613546428</TD>
+      <TD>0.012214638311784721</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -7181,8 +7493,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1756476</TD>
-      <TD/>
+      <TD>0.2939119</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7204,8 +7517,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.384615398722993</TD>
-      <TD>0.08727811023925308</TD>
+      <TD>0.03356850516945966</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>60200502</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -7227,8 +7541,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.2083861</TD>
-      <TD/>
+      <TD>0.302096525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7250,8 +7565,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7781481</TD>
-      <TD/>
+      <TD>0.194537025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7273,8 +7589,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0183099</TD>
-      <TD/>
+      <TD>0.254577475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7296,8 +7613,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.80016809</TD>
-      <TD/>
+      <TD>0.2000420225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7319,8 +7637,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.320512832269161</TD>
-      <TD>0.03492768313374938</TD>
+      <TD>0.01119477064579782</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>16000926</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -7342,8 +7661,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.89259518</TD>
-      <TD/>
+      <TD>0.223148795</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>24601053</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -7365,8 +7685,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0023867</TD>
-      <TD/>
+      <TD>0.250596675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7388,8 +7709,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.8202531</TD>
-      <TD/>
+      <TD>0.205063275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7411,8 +7733,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.97643284</TD>
-      <TD/>
+      <TD>0.24410821</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -7434,8 +7757,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.51033319</TD>
-      <TD/>
+      <TD>0.1275832975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>54300203</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -7457,8 +7781,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76986458</TD>
-      <TD/>
+      <TD>0.192466145</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7480,8 +7805,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.135501352912344</TD>
-      <TD>0.015422917643116655</TD>
+      <TD>0.0020898262064979667</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>24700319</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -7503,8 +7829,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.225733643058634</TD>
-      <TD>0.020891827400980115</TD>
+      <TD>0.004715988309375435</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -7526,8 +7853,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.143061521136507</TD>
-      <TD>0.016987276352109733</TD>
+      <TD>0.002430225594899032</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>24700418</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -7549,8 +7877,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.58299783</TD>
-      <TD/>
+      <TD>0.1457494575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -7572,8 +7901,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4030182</TD>
-      <TD/>
+      <TD>0.35075455</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -7595,8 +7925,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.70156108</TD>
-      <TD/>
+      <TD>0.17539027</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7618,8 +7949,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.81874507</TD>
-      <TD/>
+      <TD>0.2046862675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -7641,8 +7973,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65900439</TD>
-      <TD/>
+      <TD>0.1647510975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7664,8 +7997,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7754336</TD>
-      <TD/>
+      <TD>0.1938584</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7687,8 +8021,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.124223599541146</TD>
-      <TD>0.01064773646887219</TD>
+      <TD>0.001322700151128835</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>8200502</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -7710,8 +8045,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1952587</TD>
-      <TD/>
+      <TD>0.298814675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7733,8 +8069,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4632266</TD>
-      <TD/>
+      <TD>0.36580665</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -7756,8 +8093,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.157480317325747</TD>
-      <TD>0.008184017047116328</TD>
+      <TD>0.0012888216015792024</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7779,8 +8117,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5716743</TD>
-      <TD/>
+      <TD>0.392918575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -7802,8 +8141,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.16051364316829</TD>
-      <TD>0.00566821872505078</TD>
+      <TD>0.0009098264378326206</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -7825,8 +8165,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1073824</TD>
-      <TD/>
+      <TD>0.5268456</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>62803904</TD>
       <TD>H</TD>
       <TD>4.CN:u</TD>
@@ -7848,8 +8189,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6639714</TD>
-      <TD/>
+      <TD>0.41599285</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>60600505</TD>
       <TD>H</TD>
       <TD>4.Fu</TD>
@@ -7871,8 +8213,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.47338259</TD>
-      <TD/>
+      <TD>0.1183456475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7894,8 +8237,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.6639601</TD>
-      <TD/>
+      <TD>0.165990025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7917,8 +8261,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.104275285097899</TD>
-      <TD>0.012178135389480989</TD>
+      <TD>0.0012698785396989434</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>8902004</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -7940,8 +8285,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.056116723744414</TD>
-      <TD>0.0006613081829478761</TD>
+      <TD>3.711044861240636e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>8101808</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -7963,8 +8309,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.99840719</TD>
-      <TD/>
+      <TD>0.2496017975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -7986,8 +8333,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.5322241</TD>
-      <TD/>
+      <TD>0.133056025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8009,8 +8357,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4644839</TD>
-      <TD/>
+      <TD>0.366120975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>44500145</TD>
       <TD>E</TD>
       <TD>3.SE</TD>
@@ -8034,6 +8383,7 @@
       <TD>0.35587189336767</TD>
       <TD>0.03672699349753608</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -8055,8 +8405,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.80746792</TD>
-      <TD/>
+      <TD>0.20186698</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8078,8 +8429,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.113122169993091</TD>
-      <TD>0.0062703465744375474</TD>
+      <TD>0.0007093152111091201</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>7901809</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -8101,8 +8453,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73758466</TD>
-      <TD/>
+      <TD>0.184396165</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8124,8 +8477,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0481923</TD>
-      <TD/>
+      <TD>0.512048075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8147,8 +8501,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.0747454</TD>
-      <TD/>
+      <TD>0.26868635</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -8170,8 +8525,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.157232701101756</TD>
-      <TD>0.006427751637122093</TD>
+      <TD>0.0010106527519159409</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8193,8 +8549,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0078455</TD>
-      <TD/>
+      <TD>0.251961375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8216,8 +8573,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.6780432</TD>
-      <TD/>
+      <TD>0.6695108</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>60702103</TD>
       <TD>E</TD>
       <TD>3.SE</TD>
@@ -8239,8 +8597,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1058955</TD>
-      <TD/>
+      <TD>0.276473875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8262,8 +8621,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2776124</TD>
-      <TD/>
+      <TD>0.5694031</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8285,8 +8645,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.29275936</TD>
-      <TD/>
+      <TD>0.07318984</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>7903010</TD>
       <TD>E</TD>
       <TD>2.SEap</TD>
@@ -8308,8 +8669,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53541293</TD>
-      <TD/>
+      <TD>0.1338532325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8331,8 +8693,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52278324</TD>
-      <TD/>
+      <TD>0.13069581</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -8354,8 +8717,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.279329614891385</TD>
-      <TD>0.05851877592968584</TD>
+      <TD>0.016346027144354396</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8377,8 +8741,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.90523398</TD>
-      <TD/>
+      <TD>0.226308495</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8400,8 +8765,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.136</TD>
-      <TD/>
+      <TD>0.009302325581395349</TD>
       <TD>M</TD>
+      <TD>4</TD>
       <TD>8201905</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -8423,8 +8789,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79203049</TD>
-      <TD/>
+      <TD>0.1980076225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8446,8 +8813,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.75007795</TD>
-      <TD/>
+      <TD>0.1875194875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8469,8 +8837,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.31637509</TD>
-      <TD/>
+      <TD>0.0790937725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -8492,8 +8861,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.7904976</TD>
-      <TD/>
+      <TD>0.6976244</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8515,8 +8885,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.1254991</TD>
-      <TD/>
+      <TD>0.281374775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>29400809</TD>
       <TD>S</TD>
       <TD>1.N</TD>
@@ -8538,8 +8909,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.276243102655667</TD>
-      <TD>0.02365617866377592</TD>
+      <TD>0.00653485619105825</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -8561,8 +8933,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.39677493</TD>
-      <TD/>
+      <TD>0.0991937325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>39401737</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -8584,8 +8957,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.293255124583493</TD>
-      <TD>0.06793887126075249</TD>
+      <TD>0.019923422155633863</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>42800541</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -8607,8 +8981,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.136986297790676</TD>
-      <TD>0.0024394817931494154</TD>
+      <TD>0.0003341755793712981</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8630,8 +9005,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.6432838</TD>
-      <TD/>
+      <TD>0.66082095</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -8653,8 +9029,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.247524754812455</TD>
-      <TD>0.02328203183147719</TD>
+      <TD>0.005762879220622164</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8676,8 +9053,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.157728702828472</TD>
-      <TD>0.00845863689708684</TD>
+      <TD>0.001334169825474559</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8699,8 +9077,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.62235598</TD>
-      <TD/>
+      <TD>0.155588995</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -8722,8 +9101,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.2470985</TD>
-      <TD/>
+      <TD>0.311774625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8745,8 +9125,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.40670205</TD>
-      <TD/>
+      <TD>0.1016755125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8768,8 +9149,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7453286</TD>
-      <TD/>
+      <TD>0.18633215</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8791,8 +9173,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3734344</TD>
-      <TD/>
+      <TD>0.3433586</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>43400768</TD>
       <TD>P</TD>
       <TD>4.U/SC</TD>
@@ -8814,8 +9197,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.140845072314371</TD>
-      <TD>0.0073398136483422876</TD>
+      <TD>0.0010337765840747767</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8837,8 +9221,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.88418534</TD>
-      <TD/>
+      <TD>0.221046335</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8860,8 +9245,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.088417326516235</TD>
-      <TD>0.001954405959631629</TD>
+      <TD>0.00017280334987802536</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -8883,8 +9269,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53360263</TD>
-      <TD/>
+      <TD>0.1334006575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -8906,8 +9293,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0764204</TD>
-      <TD/>
+      <TD>0.2691051</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8929,8 +9317,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0101527</TD>
-      <TD/>
+      <TD>0.252538175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -8952,8 +9341,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.58050476</TD>
-      <TD/>
+      <TD>0.14512619</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -8975,8 +9365,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.359712233917788</TD>
-      <TD>0.05693287251938551</TD>
+      <TD>0.020479450757304805</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -8998,8 +9389,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.221729478769435</TD>
-      <TD>0.031956572718826</TD>
+      <TD>0.007085714212202835</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -9021,8 +9413,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.87737545</TD>
-      <TD/>
+      <TD>0.2193438625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9044,8 +9437,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.70805281</TD>
-      <TD/>
+      <TD>0.1770132025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -9067,8 +9461,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.82991986</TD>
-      <TD/>
+      <TD>0.207479965</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -9090,8 +9485,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.084317034481278</TD>
-      <TD>0.0011374979510274821</TD>
+      <TD>9.591045395916729e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -9113,8 +9509,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.37215734</TD>
-      <TD/>
+      <TD>0.093039335</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9136,8 +9533,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.43395884</TD>
-      <TD/>
+      <TD>0.10848971</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>29700401</TD>
       <TD>C</TD>
       <TD>3.CE</TD>
@@ -9159,8 +9557,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.32242386</TD>
-      <TD/>
+      <TD>0.080605965</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>8200606</TD>
       <TD>F</TD>
       <TD>2.SEa:</TD>
@@ -9182,8 +9581,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.44506752</TD>
-      <TD/>
+      <TD>0.11126688</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9205,8 +9605,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65960169</TD>
-      <TD/>
+      <TD>0.1649004225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9228,8 +9629,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.8642336</TD>
-      <TD/>
+      <TD>0.4660584</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -9251,8 +9653,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76177998</TD>
-      <TD/>
+      <TD>0.190444995</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9274,8 +9677,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.81224009</TD>
-      <TD/>
+      <TD>0.2030600225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9297,8 +9701,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3040382</TD>
-      <TD/>
+      <TD>0.57600955</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9320,8 +9725,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.46321754</TD>
-      <TD/>
+      <TD>0.115804385</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9343,8 +9749,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.59733382</TD>
-      <TD/>
+      <TD>0.149333455</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9366,8 +9773,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.205761311219733</TD>
-      <TD>0.019475349567741242</TD>
+      <TD>0.004007273463521099</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9389,8 +9797,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.6158896</TD>
-      <TD/>
+      <TD>0.6539724</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -9412,8 +9821,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.210526315789474</TD>
-      <TD>0.02083102496046782</TD>
+      <TD>0.004385478939045864</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -9435,8 +9845,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3792309</TD>
-      <TD/>
+      <TD>0.594807725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -9458,8 +9869,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53094725</TD>
-      <TD/>
+      <TD>0.1327368125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -9481,8 +9893,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.45728159</TD>
-      <TD/>
+      <TD>0.1143203975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -9504,8 +9917,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.46925236</TD>
-      <TD/>
+      <TD>0.11731309</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9527,8 +9941,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2424663</TD>
-      <TD/>
+      <TD>0.560616575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9550,8 +9965,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1640414</TD>
-      <TD/>
+      <TD>0.54101035</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9573,8 +9989,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4737283</TD>
-      <TD/>
+      <TD>0.368432075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -9596,8 +10013,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.388872</TD>
-      <TD/>
+      <TD>0.347218</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>45900615</TD>
       <TD>U</TD>
       <TD>4.SAe</TD>
@@ -9619,8 +10037,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1654271</TD>
-      <TD/>
+      <TD>0.541356775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9642,8 +10061,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6557431</TD>
-      <TD/>
+      <TD>0.413935775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9665,8 +10085,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2183713</TD>
-      <TD/>
+      <TD>0.554592825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9688,8 +10109,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.40977236</TD>
-      <TD/>
+      <TD>0.10244309</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9711,8 +10133,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.293255124583493</TD>
-      <TD>0.05073915176265095</TD>
+      <TD>0.014879516271416964</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>41901305</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -9734,8 +10157,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.86386122</TD>
-      <TD/>
+      <TD>0.215965305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9757,8 +10181,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9299339</TD>
-      <TD/>
+      <TD>0.482483475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9780,8 +10205,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2432939</TD>
-      <TD/>
+      <TD>0.560823475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9805,6 +10231,7 @@
       <TD>0.366300363741163</TD>
       <TD>0.07513853713172824</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9826,8 +10253,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.80257451</TD>
-      <TD/>
+      <TD>0.2006436275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9849,8 +10277,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.49600814</TD>
-      <TD/>
+      <TD>0.124002035</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9872,8 +10301,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.136986297790676</TD>
-      <TD>0.007506098453153316</TD>
+      <TD>0.0010282326379497926</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>8001921</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -9895,8 +10325,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.2402945</TD>
-      <TD/>
+      <TD>0.310073625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -9918,8 +10349,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.66192484</TD>
-      <TD/>
+      <TD>0.16548121</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -9941,8 +10373,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1727903</TD>
-      <TD/>
+      <TD>0.543197575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -9964,8 +10397,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.203252029368516</TD>
-      <TD>0.03015731482727056</TD>
+      <TD>0.006129535438947979</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -9987,8 +10421,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.47374272</TD>
-      <TD/>
+      <TD>0.11843568</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>45901136</TD>
       <TD>S</TD>
       <TD>2.SEa</TD>
@@ -10010,8 +10445,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.8631491</TD>
-      <TD/>
+      <TD>0.715787275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10033,8 +10469,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.36988982</TD>
-      <TD/>
+      <TD>0.092472455</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10056,8 +10493,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.62133381</TD>
-      <TD/>
+      <TD>0.1553334525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10079,8 +10517,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.052465898636926</TD>
-      <TD>0.0004404272952811398</TD>
+      <TD>2.3107413831155756e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>8201231</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -10102,8 +10541,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.62727938</TD>
-      <TD/>
+      <TD>0.156819845</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10125,8 +10565,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.237529689059136</TD>
-      <TD>0.02426075198408429</TD>
+      <TD>0.005762648875120358</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10148,8 +10589,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.233644848359664</TD>
-      <TD>0.00873438657799272</TD>
+      <TD>0.002040744427529794</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10171,8 +10613,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3155495</TD>
-      <TD/>
+      <TD>0.328887375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>27300834</TD>
       <TD>H</TD>
       <TD>4.PN</TD>
@@ -10194,8 +10637,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.54898152</TD>
-      <TD/>
+      <TD>0.13724538</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10217,8 +10661,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.5747958</TD>
-      <TD/>
+      <TD>0.64369895</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -10240,8 +10685,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.226757377460415</TD>
-      <TD>0.011312159469596952</TD>
+      <TD>0.002565115614739804</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10263,8 +10709,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.266</TD>
-      <TD/>
+      <TD>0.019101063829787237</TD>
       <TD>M</TD>
+      <TD>5</TD>
       <TD>43402028</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -10286,8 +10733,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9950619</TD>
-      <TD/>
+      <TD>0.498765475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10309,8 +10757,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.8682993</TD>
-      <TD/>
+      <TD>0.717074825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -10332,8 +10781,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.108577632557882</TD>
-      <TD>0.002122038398269781</TD>
+      <TD>0.00023040590548105273</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>80000104</TD>
       <TD>S</TD>
       <TD>2.SEa</TD>
@@ -10355,8 +10805,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6478966</TD>
-      <TD/>
+      <TD>0.41197415</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>64402513</TD>
       <TD>H</TD>
       <TD>4.U/SC</TD>
@@ -10378,8 +10829,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3285475</TD>
-      <TD/>
+      <TD>0.582136875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10401,8 +10853,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3347947</TD>
-      <TD/>
+      <TD>0.583698675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10424,8 +10877,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.40593887</TD>
-      <TD/>
+      <TD>0.1014847175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10447,8 +10901,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.84742758</TD>
-      <TD/>
+      <TD>0.211856895</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10470,8 +10925,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.2897059</TD>
-      <TD/>
+      <TD>0.322426475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10493,8 +10949,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2379437</TD>
-      <TD/>
+      <TD>0.559485925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10516,8 +10973,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52762956</TD>
-      <TD/>
+      <TD>0.13190739</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10539,8 +10997,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.5288305</TD>
-      <TD/>
+      <TD>0.132207625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10562,8 +11021,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4111174</TD>
-      <TD/>
+      <TD>0.35277935</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -10585,8 +11045,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5245471</TD>
-      <TD/>
+      <TD>0.381136775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10608,8 +11069,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.576442</TD>
-      <TD/>
+      <TD>0.6441105</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10631,8 +11093,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.35301567</TD>
-      <TD/>
+      <TD>0.0882539175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10654,8 +11117,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.119760473570659</TD>
-      <TD>0.002151385832911664</TD>
+      <TD>0.00025765098618270755</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10677,8 +11141,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79792057</TD>
-      <TD/>
+      <TD>0.1994801425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>81400201</TD>
       <TD>E</TD>
       <TD>3.SAe:</TD>
@@ -10700,8 +11165,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3646201</TD>
-      <TD/>
+      <TD>0.591155025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -10723,8 +11189,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.78017637</TD>
-      <TD/>
+      <TD>0.1950440925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -10746,8 +11213,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7284152</TD>
-      <TD/>
+      <TD>0.4321038</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10769,8 +11237,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9647705</TD>
-      <TD/>
+      <TD>0.491192625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10792,8 +11261,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73183088</TD>
-      <TD/>
+      <TD>0.18295772</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10815,8 +11285,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.81533246</TD>
-      <TD/>
+      <TD>0.203833115</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10838,8 +11309,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.019535065966543</TD>
-      <TD>8.395613978763892e-05</TD>
+      <TD>1.6400887290478318e-06</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10861,8 +11333,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.5754122</TD>
-      <TD/>
+      <TD>0.64385305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10884,8 +11357,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.49420759</TD>
-      <TD/>
+      <TD>0.1235518975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10907,8 +11381,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0043672</TD>
-      <TD/>
+      <TD>0.5010918</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -10930,8 +11405,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0454257</TD>
-      <TD/>
+      <TD>0.261356425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -10953,8 +11429,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3098009</TD>
-      <TD/>
+      <TD>0.577450225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -10976,8 +11453,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.232018564565246</TD>
-      <TD>0.019379741750080937</TD>
+      <TD>0.004496459862498948</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -10999,8 +11477,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.48635766</TD>
-      <TD/>
+      <TD>0.121589415</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -11022,8 +11501,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52181711</TD>
-      <TD/>
+      <TD>0.1304542775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11045,8 +11525,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.32814694</TD>
-      <TD/>
+      <TD>0.082036735</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11068,8 +11549,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.6881097</TD>
-      <TD/>
+      <TD>0.672027425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -11091,8 +11573,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.149031295725023</TD>
-      <TD>0.004219962190579901</TD>
+      <TD>0.0006289064331727291</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -11114,8 +11597,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6597786</TD>
-      <TD/>
+      <TD>0.41494465</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -11137,8 +11621,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.95436575</TD>
-      <TD/>
+      <TD>0.2385914375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>64701904</TD>
       <TD>I</TD>
       <TD>5.UE</TD>
@@ -11160,8 +11645,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.8978719</TD>
-      <TD/>
+      <TD>0.474467975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -11183,8 +11669,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.074441</TD>
-      <TD/>
+      <TD>0.26861025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -11206,8 +11693,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4453277</TD>
-      <TD/>
+      <TD>0.611331925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -11229,8 +11717,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.8236028</TD>
-      <TD/>
+      <TD>0.4559007</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11252,8 +11741,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.969418</TD>
-      <TD/>
+      <TD>0.4923545</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11275,8 +11765,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6947167</TD>
-      <TD/>
+      <TD>0.423679175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>45800441</TD>
       <TD>H</TD>
       <TD>4.CT</TD>
@@ -11298,8 +11789,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.8049111</TD>
-      <TD/>
+      <TD>0.701227775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -11321,8 +11813,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.47447482</TD>
-      <TD/>
+      <TD>0.118618705</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11344,8 +11837,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.1875712</TD>
-      <TD/>
+      <TD>0.2968928</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>28901123</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -11367,8 +11861,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76006605</TD>
-      <TD/>
+      <TD>0.1900165125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11390,8 +11885,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.939457</TD>
-      <TD/>
+      <TD>0.48486425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>45901669</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -11413,8 +11909,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1057448</TD>
-      <TD/>
+      <TD>0.2764362</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11436,8 +11933,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.57788858</TD>
-      <TD/>
+      <TD>0.144472145</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -11459,8 +11957,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.71972512</TD>
-      <TD/>
+      <TD>0.17993128</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -11482,8 +11981,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4247034</TD>
-      <TD/>
+      <TD>0.60617585</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -11505,8 +12005,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.098519</TD>
-      <TD/>
+      <TD>0.27462975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -11528,8 +12029,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.41521625</TD>
-      <TD/>
+      <TD>0.1038040625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>8403013</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -11551,8 +12053,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56129273</TD>
-      <TD/>
+      <TD>0.1403231825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -11574,8 +12077,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53525698</TD>
-      <TD/>
+      <TD>0.133814245</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -11597,8 +12101,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0304951</TD>
-      <TD/>
+      <TD>0.507623775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -11620,8 +12125,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.49859387</TD>
-      <TD/>
+      <TD>0.1246484675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11643,8 +12149,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3816093</TD>
-      <TD/>
+      <TD>0.345402325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>9400716</TD>
       <TD>L</TD>
       <TD>5.PNup</TD>
@@ -11666,8 +12173,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1771135</TD>
-      <TD/>
+      <TD>0.294278375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11689,8 +12197,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.6157071</TD>
-      <TD/>
+      <TD>0.653926775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11712,8 +12221,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.67332251</TD>
-      <TD/>
+      <TD>0.1683306275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11735,8 +12245,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.81622368</TD>
-      <TD/>
+      <TD>0.20405592</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11758,8 +12269,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65162829</TD>
-      <TD/>
+      <TD>0.1629070725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11781,8 +12293,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4356681</TD>
-      <TD/>
+      <TD>0.608917025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -11804,8 +12317,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53147444</TD>
-      <TD/>
+      <TD>0.13286861</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>11601203</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -11827,8 +12341,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.110253586951127</TD>
-      <TD>0.01604572698953075</TD>
+      <TD>0.0017690989558342737</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>28101115</TD>
       <TD>S</TD>
       <TD>1.NOp</TD>
@@ -11850,8 +12365,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0094735</TD>
-      <TD/>
+      <TD>0.502368375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -11873,8 +12389,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5086275</TD>
-      <TD/>
+      <TD>0.377156875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>28902214</TD>
       <TD>H</TD>
       <TD>4.SA</TD>
@@ -11896,8 +12413,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.57406902</TD>
-      <TD/>
+      <TD>0.143517255</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11919,8 +12437,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.42501264</TD>
-      <TD/>
+      <TD>0.10625316</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11942,8 +12461,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7747942</TD>
-      <TD/>
+      <TD>0.19369855</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11965,8 +12485,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65361854</TD>
-      <TD/>
+      <TD>0.163404635</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -11988,8 +12509,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.6864047</TD>
-      <TD/>
+      <TD>0.671601175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12011,8 +12533,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.51046713</TD>
-      <TD/>
+      <TD>0.1276167825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12034,8 +12557,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2312903</TD>
-      <TD/>
+      <TD>0.557822575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -12057,8 +12581,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.53114322</TD>
-      <TD/>
+      <TD>0.132785805</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -12080,8 +12605,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.198019794501133</TD>
-      <TD>0.025095575749215008</TD>
+      <TD>0.004969420752747172</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -12103,8 +12629,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1150844</TD>
-      <TD/>
+      <TD>0.2787711</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12126,8 +12653,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1029146</TD>
-      <TD/>
+      <TD>0.27572865</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12149,8 +12677,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5509514</TD>
-      <TD/>
+      <TD>0.38773785</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12172,8 +12701,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2164822</TD>
-      <TD/>
+      <TD>0.55412055</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>48401422</TD>
       <TD>L</TD>
       <TD>4.PN</TD>
@@ -12195,8 +12725,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1976714</TD>
-      <TD/>
+      <TD>0.29941785</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12218,8 +12749,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.45672127</TD>
-      <TD/>
+      <TD>0.1141803175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12241,8 +12773,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.54468236</TD>
-      <TD/>
+      <TD>0.13617059</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -12264,8 +12797,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3590358</TD>
-      <TD/>
+      <TD>0.58975895</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -12287,8 +12821,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.9682638</TD>
-      <TD/>
+      <TD>0.74206595</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -12310,8 +12845,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55848231</TD>
-      <TD/>
+      <TD>0.1396205775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -12333,8 +12869,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0840871</TD>
-      <TD/>
+      <TD>0.271021775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12356,8 +12893,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.68210949</TD>
-      <TD/>
+      <TD>0.1705273725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>81601210</TD>
       <TD>C</TD>
       <TD>3.CR</TD>
@@ -12379,8 +12917,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.2842471</TD>
-      <TD/>
+      <TD>0.321061775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -12402,8 +12941,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.98150157</TD>
-      <TD/>
+      <TD>0.2453753925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>13602128</TD>
       <TD>E</TD>
       <TD>4.SA</TD>
@@ -12425,8 +12965,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0010315</TD>
-      <TD/>
+      <TD>0.500257875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -12448,8 +12989,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.029498</TD>
-      <TD/>
+      <TD>0.5073745</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -12471,8 +13013,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.43286044</TD>
-      <TD/>
+      <TD>0.10821511</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12494,8 +13037,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.8132678</TD>
-      <TD/>
+      <TD>0.20331695</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12517,8 +13061,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.68749225</TD>
-      <TD/>
+      <TD>0.1718730625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12540,8 +13085,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4837421</TD>
-      <TD/>
+      <TD>0.620935525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>32701619</TD>
       <TD>H</TD>
       <TD>4.Fu</TD>
@@ -12563,8 +13109,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.0056191</TD>
-      <TD/>
+      <TD>0.251404775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>28700701</TD>
       <TD>E</TD>
       <TD>4.SB</TD>
@@ -12586,8 +13133,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.66192307</TD>
-      <TD/>
+      <TD>0.1654807675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>46600803</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -12609,8 +13157,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.8628498</TD>
-      <TD/>
+      <TD>0.71571245</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12632,8 +13181,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.98009038</TD>
-      <TD/>
+      <TD>0.245022595</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12655,8 +13205,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.370370363829394</TD>
-      <TD>0.07270232818387468</TD>
+      <TD>0.026926787740705668</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -12678,8 +13229,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.77254587</TD>
-      <TD/>
+      <TD>0.1931364675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>82700405</TD>
       <TD>U</TD>
       <TD>3.SE</TD>
@@ -12701,8 +13253,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.381679405984634</TD>
-      <TD>0.08595070345313828</TD>
+      <TD>0.03280561343795525</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -12724,8 +13277,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.40519357</TD>
-      <TD/>
+      <TD>0.1012983925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>13601695</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -12747,8 +13301,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3482513</TD>
-      <TD/>
+      <TD>0.337062825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -12770,8 +13325,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.60971967</TD>
-      <TD/>
+      <TD>0.1524299175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -12793,8 +13349,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3988698</TD>
-      <TD/>
+      <TD>0.59971745</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>46900969</TD>
       <TD>H</TD>
       <TD>4.SEC:e</TD>
@@ -12816,8 +13373,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.5766645</TD>
-      <TD/>
+      <TD>0.644166125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12839,8 +13397,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9060073</TD>
-      <TD/>
+      <TD>0.476501825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>33102402</TD>
       <TD>U</TD>
       <TD>4.CT:</TD>
@@ -12862,8 +13421,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.38427002</TD>
-      <TD/>
+      <TD>0.096067505</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>28702002</TD>
       <TD/>
       <TD>5.F</TD>
@@ -12885,8 +13445,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0174807</TD>
-      <TD/>
+      <TD>0.254370175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -12908,8 +13469,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7594762</TD>
-      <TD/>
+      <TD>0.18986905</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -12931,8 +13493,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7413976</TD>
-      <TD/>
+      <TD>0.4353494</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -12954,8 +13517,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.74982831</TD>
-      <TD/>
+      <TD>0.1874570775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -12977,8 +13541,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83418794</TD>
-      <TD/>
+      <TD>0.208546985</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13000,8 +13565,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1620916</TD>
-      <TD/>
+      <TD>0.2905229</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13023,8 +13589,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.62648032</TD>
-      <TD/>
+      <TD>0.15662008</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13046,8 +13613,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.50926842</TD>
-      <TD/>
+      <TD>0.127317105</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -13069,8 +13637,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1835632</TD>
-      <TD/>
+      <TD>0.5458908</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -13092,8 +13661,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.595589</TD>
-      <TD/>
+      <TD>0.14889725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13115,8 +13685,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.89593574</TD>
-      <TD/>
+      <TD>0.223983935</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13138,8 +13709,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.61119916</TD>
-      <TD/>
+      <TD>0.15279979</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13161,8 +13733,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1119545</TD>
-      <TD/>
+      <TD>0.277988625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>12102004</TD>
       <TD>U</TD>
       <TD>4.CR</TD>
@@ -13184,8 +13757,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2420641</TD>
-      <TD/>
+      <TD>0.560516025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13207,8 +13781,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76416697</TD>
-      <TD/>
+      <TD>0.1910417425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13230,8 +13805,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.296735915121285</TD>
-      <TD>0.02377409601859358</TD>
+      <TD>0.007054628138258664</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>77800625</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -13253,8 +13829,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1517872</TD>
-      <TD/>
+      <TD>0.2879468</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>45401501</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -13276,8 +13853,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0732501</TD>
-      <TD/>
+      <TD>0.518312525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -13299,8 +13877,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.97860168</TD>
-      <TD/>
+      <TD>0.24465042</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13322,8 +13901,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0429879</TD>
-      <TD/>
+      <TD>0.260746975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13345,8 +13925,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.42774575</TD>
-      <TD/>
+      <TD>0.1069364375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -13368,8 +13949,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73429505</TD>
-      <TD/>
+      <TD>0.1835737625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>9901207</TD>
       <TD>P</TD>
       <TD>3.W</TD>
@@ -13391,8 +13973,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5404216</TD>
-      <TD/>
+      <TD>0.3851054</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13414,8 +13997,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.64021747</TD>
-      <TD/>
+      <TD>0.1600543675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -13437,8 +14021,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.62165397</TD>
-      <TD/>
+      <TD>0.1554134925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13460,8 +14045,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5816208</TD>
-      <TD/>
+      <TD>0.3954052</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -13483,8 +14069,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.80149608</TD>
-      <TD/>
+      <TD>0.20037402</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13506,8 +14093,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.226244339986182</TD>
-      <TD>0.025593251289833627</TD>
+      <TD>0.005790328246168911</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -13529,8 +14117,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.84507407</TD>
-      <TD/>
+      <TD>0.2112685175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13552,8 +14141,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.97807662</TD>
-      <TD/>
+      <TD>0.244519155</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -13575,8 +14165,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.55983879</TD>
-      <TD/>
+      <TD>0.1399596975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13598,8 +14189,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.2546958</TD>
-      <TD/>
+      <TD>0.06367395</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>9900171</TD>
       <TD>E</TD>
       <TD>3.SE</TD>
@@ -13621,8 +14213,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.5343433</TD>
-      <TD/>
+      <TD>0.133585825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -13644,8 +14237,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.75323202</TD>
-      <TD/>
+      <TD>0.188308005</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13667,8 +14261,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.96558156</TD>
-      <TD/>
+      <TD>0.24139539</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13690,8 +14285,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.95403761</TD>
-      <TD/>
+      <TD>0.2385094025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -13713,8 +14309,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.78723881</TD>
-      <TD/>
+      <TD>0.1968097025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13736,8 +14333,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.9119469</TD>
-      <TD/>
+      <TD>0.727986725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -13759,8 +14357,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83085501</TD>
-      <TD/>
+      <TD>0.2077137525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13782,8 +14381,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.56470017</TD>
-      <TD/>
+      <TD>0.1411750425</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13805,8 +14405,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4360179</TD>
-      <TD/>
+      <TD>0.359004475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -13828,8 +14429,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.044742728542819</TD>
-      <TD>0.0004804588072253477</TD>
+      <TD>2.1497037987690336e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -13851,8 +14453,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9872962</TD>
-      <TD/>
+      <TD>0.49682405</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -13874,8 +14477,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.41346552</TD>
-      <TD/>
+      <TD>0.10336638</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -13897,8 +14501,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.128985</TD>
-      <TD/>
+      <TD>0.53224625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -13920,8 +14525,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.10660980680165</TD>
-      <TD>0.0020458172113785524</TD>
+      <TD>0.0002181041776565578</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -13943,8 +14549,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.58131408</TD>
-      <TD/>
+      <TD>0.14532852</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -13966,8 +14573,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.62122238</TD>
-      <TD/>
+      <TD>0.155305595</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -13989,8 +14597,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.48271991</TD>
-      <TD/>
+      <TD>0.1206799775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14012,8 +14621,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.87533411</TD>
-      <TD/>
+      <TD>0.2188335275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14035,8 +14645,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.3124301</TD>
-      <TD/>
+      <TD>0.328107525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>P</TD>
       <TD/>
@@ -14058,8 +14669,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.60215418</TD>
-      <TD/>
+      <TD>0.150538545</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>47100261</TD>
       <TD>C</TD>
       <TD>3.CR</TD>
@@ -14081,8 +14693,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.52541707</TD>
-      <TD/>
+      <TD>0.1313542675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14104,8 +14717,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9333194</TD>
-      <TD/>
+      <TD>0.48332985</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>87200833</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -14127,8 +14741,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.88810305</TD>
-      <TD/>
+      <TD>0.2220257625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14150,8 +14765,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0634836</TD>
-      <TD/>
+      <TD>0.5158709</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -14173,8 +14789,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.85093175</TD>
-      <TD/>
+      <TD>0.2127329375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -14196,8 +14813,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.47217272</TD>
-      <TD/>
+      <TD>0.11804318</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14219,8 +14837,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.7648404</TD>
-      <TD/>
+      <TD>0.1912101</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>H</TD>
       <TD/>
@@ -14242,8 +14861,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1992882</TD>
-      <TD/>
+      <TD>0.54982205</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -14265,8 +14885,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9491405</TD>
-      <TD/>
+      <TD>0.487285125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14288,8 +14909,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.50509481</TD>
-      <TD/>
+      <TD>0.1262737025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>36100832</TD>
       <TD>U</TD>
       <TD>2.CE</TD>
@@ -14311,8 +14933,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.75990861</TD>
-      <TD/>
+      <TD>0.1899771525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>52300444</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -14334,8 +14957,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0942303</TD>
-      <TD/>
+      <TD>0.523557575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -14357,8 +14981,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.82445239</TD>
-      <TD/>
+      <TD>0.2061130975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>71200120</TD>
       <TD>E</TD>
       <TD>3.SB</TD>
@@ -14380,8 +15005,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.76924133</TD>
-      <TD/>
+      <TD>0.1923103325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>33000525</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -14403,8 +15029,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.49809894</TD>
-      <TD/>
+      <TD>0.124524735</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14426,8 +15053,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.27829549</TD>
-      <TD/>
+      <TD>0.0695738725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>47201847</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -14449,8 +15077,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6374299</TD>
-      <TD/>
+      <TD>0.409357475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14472,8 +15101,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.48055855</TD>
-      <TD/>
+      <TD>0.1201396375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14495,8 +15125,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0055681</TD>
-      <TD/>
+      <TD>0.501392025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>86901013</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -14518,8 +15149,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.70335196</TD>
-      <TD/>
+      <TD>0.17583799</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14541,8 +15173,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.61475887</TD>
-      <TD/>
+      <TD>0.1536897175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>83801219</TD>
       <TD>C</TD>
       <TD>7</TD>
@@ -14564,8 +15197,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.63485767</TD>
-      <TD/>
+      <TD>0.1587144175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>49901342</TD>
       <TD>C</TD>
       <TD>3.CE</TD>
@@ -14587,8 +15221,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56105715</TD>
-      <TD/>
+      <TD>0.1402642875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>82700735</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -14610,8 +15245,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0090595</TD>
-      <TD/>
+      <TD>0.252264875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14633,8 +15269,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.82846311</TD>
-      <TD/>
+      <TD>0.2071157775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>87201107</TD>
       <TD>E</TD>
       <TD>7</TD>
@@ -14656,8 +15293,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.984258</TD>
-      <TD/>
+      <TD>0.2460645</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14679,8 +15317,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5838563</TD>
-      <TD/>
+      <TD>0.395964075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14702,8 +15341,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1081983</TD>
-      <TD/>
+      <TD>0.277049575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14725,8 +15365,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1890319</TD>
-      <TD/>
+      <TD>0.547257975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -14748,8 +15389,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.496928</TD>
-      <TD/>
+      <TD>0.374232</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -14771,8 +15413,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.9996403</TD>
-      <TD/>
+      <TD>0.749910075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -14794,8 +15437,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7089076</TD>
-      <TD/>
+      <TD>0.4272269</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -14817,8 +15461,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9984021</TD>
-      <TD/>
+      <TD>0.499600525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -14840,8 +15485,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.2622802</TD>
-      <TD/>
+      <TD>0.31557005</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>30801670</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -14863,8 +15509,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.90026734</TD>
-      <TD/>
+      <TD>0.225066835</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14886,8 +15533,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0946967</TD>
-      <TD/>
+      <TD>0.273674175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -14909,8 +15557,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.75071449</TD>
-      <TD/>
+      <TD>0.1876786225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14932,8 +15581,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9355262</TD>
-      <TD/>
+      <TD>0.48388155</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -14955,8 +15605,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.74170192</TD>
-      <TD/>
+      <TD>0.18542548</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -14978,8 +15629,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.45230886</TD>
-      <TD/>
+      <TD>0.113077215</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15001,8 +15653,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.225733643058634</TD>
-      <TD>0.009172022462637028</TD>
+      <TD>0.00207043404470668</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>10200126</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -15024,8 +15677,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.9595386</TD>
-      <TD/>
+      <TD>0.48988465</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15047,8 +15701,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.091407681751023</TD>
-      <TD>0.0010026437044612488</TD>
+      <TD>9.164933664706059e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>53000214</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -15070,8 +15725,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56426173</TD>
-      <TD/>
+      <TD>0.1410654325</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -15093,8 +15749,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0981907</TD>
-      <TD/>
+      <TD>0.274547675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15118,6 +15775,7 @@
       <TD>0.7</TD>
       <TD/>
       <TD>M</TD>
+      <TD>6</TD>
       <TD>70900322</TD>
       <TD>A</TD>
       <TD>4.SB</TD>
@@ -15139,8 +15797,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.50811363</TD>
-      <TD/>
+      <TD>0.1270284075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15162,8 +15821,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.215982716043788</TD>
-      <TD>0.01912589900022796</TD>
+      <TD>0.004130863612848403</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -15185,8 +15845,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0301168</TD>
-      <TD/>
+      <TD>0.2575292</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>70400558</TD>
       <TD>U</TD>
       <TD>4.SECe</TD>
@@ -15208,8 +15869,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.1327427</TD>
-      <TD/>
+      <TD>0.283185675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -15231,8 +15893,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.36156111</TD>
-      <TD/>
+      <TD>0.0903902775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15254,8 +15917,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.210084023511677</TD>
-      <TD>0.050314237926103095</TD>
+      <TD>0.010570217543439552</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15277,8 +15941,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.64784907</TD>
-      <TD/>
+      <TD>0.1619622675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15300,8 +15965,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73039876</TD>
-      <TD/>
+      <TD>0.18259969</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>87201221</TD>
       <TD>C</TD>
       <TD>3.CE</TD>
@@ -15323,8 +15989,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.42047187</TD>
-      <TD/>
+      <TD>0.1051179675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>16402151</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -15346,8 +16013,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.69417064</TD>
-      <TD/>
+      <TD>0.17354266</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15369,8 +16037,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.28015341</TD>
-      <TD/>
+      <TD>0.0700383525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15392,8 +16061,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.74600861</TD>
-      <TD/>
+      <TD>0.1865021525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>52300905</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -15415,8 +16085,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.85962599</TD>
-      <TD/>
+      <TD>0.2149064975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15438,8 +16109,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.71252679</TD>
-      <TD/>
+      <TD>0.1781316975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15461,8 +16133,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1165393</TD>
-      <TD/>
+      <TD>0.279134825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15484,8 +16157,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.47387099</TD>
-      <TD/>
+      <TD>0.1184677475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15507,8 +16181,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0941713</TD>
-      <TD/>
+      <TD>0.273542825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15530,8 +16205,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.22988506251116</TD>
-      <TD>0.03910688576439354</TD>
+      <TD>0.008990088878564402</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15553,8 +16229,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.86278506</TD>
-      <TD/>
+      <TD>0.215696265</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -15576,8 +16253,9 @@
       <TD>high</TD>
       <TD>1</TD>
       <TD>0.27459814</TD>
-      <TD/>
+      <TD>0.068649535</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>16402335</TD>
       <TD>E</TD>
       <TD>3.SEp</TD>
@@ -15599,8 +16277,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.45354025</TD>
-      <TD/>
+      <TD>0.1133850625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15622,8 +16301,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4630388</TD>
-      <TD/>
+      <TD>0.3657597</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15645,8 +16325,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.69808241</TD>
-      <TD/>
+      <TD>0.1745206025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -15668,8 +16349,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.226757377460415</TD>
-      <TD>0.04627701739428492</TD>
+      <TD>0.010493655101018056</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -15691,8 +16373,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6374446</TD>
-      <TD/>
+      <TD>0.40936115</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15714,8 +16397,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.331718</TD>
-      <TD/>
+      <TD>0.3329295</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>35001427</TD>
       <TD>A</TD>
       <TD>3.SB:</TD>
@@ -15737,8 +16421,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.42426489</TD>
-      <TD/>
+      <TD>0.1060662225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>73201510</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -15760,8 +16445,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.242718453343913</TD>
-      <TD>0.039471205950140746</TD>
+      <TD>0.009580390059837218</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>38301404</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -15783,8 +16469,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.40334479</TD>
-      <TD/>
+      <TD>0.1008361975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>12801311</TD>
       <TD>E</TD>
       <TD>4.SEC</TD>
@@ -15806,8 +16493,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.57932691</TD>
-      <TD/>
+      <TD>0.1448317275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15829,8 +16517,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.90727269</TD>
-      <TD/>
+      <TD>0.2268181725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15852,8 +16541,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.5442157</TD>
-      <TD/>
+      <TD>0.386053925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>50200604</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -15875,8 +16565,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.133155788218783</TD>
-      <TD>0.005851053366425863</TD>
+      <TD>0.0007791016229165994</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -15898,8 +16589,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.219780210567088</TD>
-      <TD>0.03139717106673817</TD>
+      <TD>0.006900476868258598</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -15921,8 +16613,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.4107574</TD>
-      <TD/>
+      <TD>0.60268935</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -15944,8 +16637,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.64388894</TD>
-      <TD/>
+      <TD>0.160972235</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -15967,8 +16661,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.49401789</TD>
-      <TD/>
+      <TD>0.1235044725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -15990,8 +16685,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.202429147452816</TD>
-      <TD>0.01925945350166907</TD>
+      <TD>0.003898674752750022</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16013,8 +16709,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.215982716043788</TD>
-      <TD>0.0275226339299599</TD>
+      <TD>0.005944413228871653</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16036,8 +16733,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.8827628</TD>
-      <TD/>
+      <TD>0.2206907</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>52601240</TD>
       <TD>C</TD>
       <TD>7</TD>
@@ -16059,8 +16757,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4520146</TD>
-      <TD/>
+      <TD>0.36300365</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>86500540</TD>
       <TD>P</TD>
       <TD>4.PU</TD>
@@ -16082,8 +16781,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1090625</TD>
-      <TD/>
+      <TD>0.277265625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16105,8 +16805,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1751849</TD>
-      <TD/>
+      <TD>0.543796225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -16128,8 +16829,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1063291</TD>
-      <TD/>
+      <TD>0.276582275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16151,8 +16853,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2842367</TD>
-      <TD/>
+      <TD>0.571059175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -16174,8 +16877,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.197238652098963</TD>
-      <TD>0.02295281917498532</TD>
+      <TD>0.004527183115945336</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16197,8 +16901,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.4102076</TD>
-      <TD/>
+      <TD>0.3525519</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>54700107</TD>
       <TD>E</TD>
       <TD>3.SEe</TD>
@@ -16220,8 +16925,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.001892</TD>
-      <TD/>
+      <TD>0.250473</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16243,8 +16949,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.1084422</TD>
-      <TD/>
+      <TD>0.27711055</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16266,8 +16973,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.121065371947982</TD>
-      <TD>0.002491660121581377</TD>
+      <TD>0.0003016537593872035</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16289,8 +16997,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.182149370071163</TD>
-      <TD>0.023888443355912406</TD>
+      <TD>0.0043512649092601035</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16312,8 +17021,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.34886704</TD>
-      <TD/>
+      <TD>0.08721676</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>34401040</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -16335,8 +17045,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.180831819540683</TD>
-      <TD>0.035970162239310155</TD>
+      <TD>0.006504549886908024</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>68100103</TD>
       <TD>E</TD>
       <TD/>
@@ -16358,8 +17069,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.212314223333515</TD>
-      <TD>0.009917012175343317</TD>
+      <TD>0.002105522737797028</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16381,8 +17093,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.31865316</TD>
-      <TD/>
+      <TD>0.07966329</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>32301516</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -16404,8 +17117,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.183823527478223</TD>
-      <TD>0.042914683643530155</TD>
+      <TD>0.007888728527965712</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>14401702</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -16427,8 +17141,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.54489153</TD>
-      <TD/>
+      <TD>0.1362228825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16450,8 +17165,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76603998</TD>
-      <TD/>
+      <TD>0.191509995</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16473,8 +17189,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.633</TD>
-      <TD/>
+      <TD>0.16025316455696204</TD>
       <TD>M</TD>
+      <TD>7</TD>
       <TD>53400809</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -16496,8 +17213,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.0969239</TD>
-      <TD/>
+      <TD>0.524230975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -16519,8 +17237,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.185185181914697</TD>
-      <TD>0.02023319505571093</TD>
+      <TD>0.0037468879071073766</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16542,8 +17261,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.145772591915052</TD>
-      <TD>0.005524908424329162</TD>
+      <TD>0.000805380221107768</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>12103028</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -16565,8 +17285,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.409836055962702</TD>
-      <TD>0.06382692394506152</TD>
+      <TD>0.02615857477387536</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16588,8 +17309,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.86582189</TD>
-      <TD/>
+      <TD>0.2164554725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -16611,8 +17333,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.13755158220407</TD>
-      <TD>0.003405678846893698</TD>
+      <TD>0.0004684565138691608</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -16634,8 +17357,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.55025569</TD>
-      <TD/>
+      <TD>0.1375639225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -16657,8 +17381,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1378065</TD>
-      <TD/>
+      <TD>0.284451625</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>26300316</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -16680,8 +17405,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.1857649</TD>
-      <TD/>
+      <TD>0.296441225</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -16703,8 +17429,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.271467</TD>
-      <TD/>
+      <TD>0.31786675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16726,8 +17453,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.8506075</TD>
-      <TD/>
+      <TD>0.462651875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>13001348</TD>
       <TD>H</TD>
       <TD>4.F:</TD>
@@ -16749,8 +17477,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.197238652098963</TD>
-      <TD>0.023341852623747054</TD>
+      <TD>0.004603915549000512</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>85700514</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -16772,8 +17501,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.81485159</TD>
-      <TD/>
+      <TD>0.2037128975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>12501616</TD>
       <TD>E</TD>
       <TD>7</TD>
@@ -16795,8 +17525,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1479006</TD>
-      <TD/>
+      <TD>0.28697515</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16818,8 +17549,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0671442</TD>
-      <TD/>
+      <TD>0.26678605</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16841,8 +17573,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.24131272</TD>
-      <TD/>
+      <TD>0.06032818</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>14401801</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -16864,8 +17597,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.43116122</TD>
-      <TD/>
+      <TD>0.107790305</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>17000529</TD>
       <TD>E</TD>
       <TD>4.CR:</TD>
@@ -16887,8 +17621,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.58890012</TD>
-      <TD/>
+      <TD>0.14722503</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>73200811</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -16910,8 +17645,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.7422587</TD>
-      <TD/>
+      <TD>0.435564675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -16933,8 +17669,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.48448429</TD>
-      <TD/>
+      <TD>0.1211210725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -16956,8 +17693,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.76106036</TD>
-      <TD/>
+      <TD>0.19026509</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>14100818</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -16979,8 +17717,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.98700589</TD>
-      <TD/>
+      <TD>0.2467514725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17002,8 +17741,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.290697669583182</TD>
-      <TD>0.05154813185877915</TD>
+      <TD>0.014984921802713679</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>I</TD>
       <TD/>
@@ -17025,8 +17765,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.50050698</TD>
-      <TD/>
+      <TD>0.125126745</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -17048,8 +17789,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.5008344</TD>
-      <TD/>
+      <TD>0.1252086</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>38101617</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -17071,8 +17813,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.34941435</TD>
-      <TD/>
+      <TD>0.0873535875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>35201201</TD>
       <TD>U</TD>
       <TD>2.SEcp</TD>
@@ -17094,8 +17837,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0212755</TD>
-      <TD/>
+      <TD>0.255318875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17117,8 +17861,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.99834394</TD>
-      <TD/>
+      <TD>0.249585985</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17140,8 +17885,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.43821907</TD>
-      <TD/>
+      <TD>0.1095547675</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>12700917</TD>
       <TD>E</TD>
       <TD>3.SE</TD>
@@ -17163,8 +17909,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.335570467650839</TD>
-      <TD>0.07657312657802291</TD>
+      <TD>0.025695679895274035</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17186,8 +17933,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.210526315789474</TD>
-      <TD>0.04476454383448555</TD>
+      <TD>0.009424114491470657</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>87201305</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -17209,8 +17957,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52024266</TD>
-      <TD/>
+      <TD>0.130060665</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17232,8 +17981,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.4882495</TD>
-      <TD/>
+      <TD>0.122062375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>12701432</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -17255,8 +18005,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.69427155</TD>
-      <TD/>
+      <TD>0.1735678875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17278,8 +18029,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.65284879</TD>
-      <TD/>
+      <TD>0.1632121975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17301,8 +18053,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1310891</TD>
-      <TD/>
+      <TD>0.282772275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17324,8 +18077,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.116822424179832</TD>
-      <TD>0.006823739242058432</TD>
+      <TD>0.0007971657602283155</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17347,8 +18101,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.54281711</TD>
-      <TD/>
+      <TD>0.1357042775</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17370,8 +18125,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.177935946683835</TD>
-      <TD>0.009181748374384109</TD>
+      <TD>0.0016337630892087995</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17395,6 +18151,7 @@
       <TD>0.352112686697913</TD>
       <TD>0.08554850819223875</TD>
       <TD>G</TD>
+      <TD>12; 13; 14; 15</TD>
       <TD>59501909</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -17416,8 +18173,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.35916615</TD>
-      <TD/>
+      <TD>0.0897915375</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17439,8 +18197,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73489207</TD>
-      <TD/>
+      <TD>0.1837230175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>51801556</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -17462,8 +18221,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.52450294</TD>
-      <TD/>
+      <TD>0.131125735</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -17485,8 +18245,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.179533208111505</TD>
-      <TD>0.009025008385313943</TD>
+      <TD>0.001620288708648646</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17508,8 +18269,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.194174753685835</TD>
-      <TD>0.02262230161097805</TD>
+      <TD>0.004392679843118331</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>73201716</TD>
       <TD>S</TD>
       <TD>2.SEa</TD>
@@ -17531,8 +18293,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.303951371305418</TD>
-      <TD>0.04065003304525038</TD>
+      <TD>0.012355633287714411</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17554,8 +18317,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.81292341</TD>
-      <TD/>
+      <TD>0.2032308525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17577,8 +18341,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.8689589</TD>
-      <TD/>
+      <TD>0.217239725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17600,8 +18365,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.2583979404577</TD>
-      <TD>0.04540325808547049</TD>
+      <TD>0.011732108379354988</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17623,8 +18389,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.54220698</TD>
-      <TD/>
+      <TD>0.135551745</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17646,8 +18413,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.79404153</TD>
-      <TD/>
+      <TD>0.1985103825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17669,8 +18437,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3803501</TD>
-      <TD/>
+      <TD>0.595087525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>A</TD>
       <TD/>
@@ -17692,8 +18461,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.94876134</TD>
-      <TD/>
+      <TD>0.237190335</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -17715,8 +18485,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.317460307849088</TD>
-      <TD>0.04736709072878744</TD>
+      <TD>0.015037171204676543</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17738,8 +18509,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.92512461</TD>
-      <TD/>
+      <TD>0.2312811525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17761,8 +18533,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.92015479</TD>
-      <TD/>
+      <TD>0.2300386975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -17784,8 +18557,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.36948284</TD>
-      <TD/>
+      <TD>0.09237071</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17807,8 +18581,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.92202171</TD>
-      <TD/>
+      <TD>0.2305054275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17830,8 +18605,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.187617263473557</TD>
-      <TD>0.03168021302454316</TD>
+      <TD>0.005943754873924126</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>42602251</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -17853,8 +18629,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.49693126</TD>
-      <TD/>
+      <TD>0.124232815</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17876,8 +18653,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0891647</TD>
-      <TD/>
+      <TD>0.272291175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17899,8 +18677,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.84409628</TD>
-      <TD/>
+      <TD>0.21102407</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17922,8 +18701,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.126262625046329</TD>
-      <TD>0.004463829997861463</TD>
+      <TD>0.0005636148932905375</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -17945,8 +18725,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.91261448</TD>
-      <TD/>
+      <TD>0.22815362</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -17968,8 +18749,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.1212452</TD>
-      <TD/>
+      <TD>0.5303113</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>15901777</TD>
       <TD>P</TD>
       <TD>4.Mu</TD>
@@ -17991,8 +18773,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.92401024</TD>
-      <TD/>
+      <TD>0.23100256</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18014,8 +18797,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.2108602</TD>
-      <TD/>
+      <TD>0.55271505</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18037,8 +18821,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.97077725</TD>
-      <TD/>
+      <TD>0.2426943125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>54600506</TD>
       <TD>U</TD>
       <TD>4.CR</TD>
@@ -18060,8 +18845,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.58997859</TD>
-      <TD/>
+      <TD>0.1474946475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -18083,8 +18869,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.276243102655667</TD>
-      <TD>0.037392024206731385</TD>
+      <TD>0.010329288781443282</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18106,8 +18893,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.174825181237724</TD>
-      <TD>0.011614261139128997</TD>
+      <TD>0.0020304653085904817</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -18129,8 +18917,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.42115941</TD>
-      <TD/>
+      <TD>0.1052898525</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>75100424</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -18152,8 +18941,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.56545123</TD>
-      <TD/>
+      <TD>0.1413628075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18175,8 +18965,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.38476491</TD>
-      <TD/>
+      <TD>0.0961912275</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18198,8 +18989,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.223713657032884</TD>
-      <TD>0.017016251813874853</TD>
+      <TD>0.003806767922274389</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18221,8 +19013,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.624999990686774</TD>
-      <TD>0.14843749592546387</TD>
+      <TD>0.09277343357098299</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>74500512</TD>
       <TD>C</TD>
       <TD>2.CE</TD>
@@ -18244,8 +19037,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.209643606708309</TD>
-      <TD>0.01538265463594189</TD>
+      <TD>0.003224875198627148</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18267,8 +19061,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83201801</TD>
-      <TD/>
+      <TD>0.2080045025</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>80000938</TD>
       <TD>F</TD>
       <TD>7</TD>
@@ -18290,8 +19085,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.211416489633732</TD>
-      <TD>0.007598478529071372</TD>
+      <TD>0.001606443657173553</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18313,8 +19109,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.18395586</TD>
-      <TD/>
+      <TD>0.045988965</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>39802402</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -18336,8 +19133,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.113636361173362</TD>
-      <TD>0.008135330263639998</TD>
+      <TD>0.0009244693281035771</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>53501243</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -18359,8 +19157,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.54019445</TD>
-      <TD/>
+      <TD>0.1350486125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18382,8 +19181,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.822863</TD>
-      <TD/>
+      <TD>0.45571575</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>39500195</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -18405,8 +19205,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.84567109</TD>
-      <TD/>
+      <TD>0.2114177725</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18428,8 +19229,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.269541776204258</TD>
-      <TD>0.043591663716959834</TD>
+      <TD>0.011749774465968062</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18451,8 +19253,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.130039010735905</TD>
-      <TD>0.0035511302862033457</TD>
+      <TD>0.0004617854694121942</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18474,8 +19277,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.33374475</TD>
-      <TD/>
+      <TD>0.0834361875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>17301206</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -18497,8 +19301,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.75728984</TD>
-      <TD/>
+      <TD>0.18932246</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18520,8 +19325,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>2.3744064</TD>
-      <TD/>
+      <TD>0.5936016</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -18543,8 +19349,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.25</TD>
-      <TD>0.04125000163912775</TD>
+      <TD>0.010312500409781938</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18566,8 +19373,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.08912655759364</TD>
-      <TD>0.0018270149617961103</TD>
+      <TD>0.000162835554216963</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18591,6 +19399,7 @@
       <TD>2.1</TD>
       <TD/>
       <TD>M</TD>
+      <TD>8</TD>
       <TD>28300921</TD>
       <TD>A</TD>
       <TD>4.SA</TD>
@@ -18612,8 +19421,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.296735915121285</TD>
-      <TD>0.06868071446197627</TD>
+      <TD>0.0203800346570582</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>53500647</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -18635,8 +19445,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.163132133985483</TD>
-      <TD>0.020225190135896236</TD>
+      <TD>0.003299378427130894</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>34402039</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -18658,8 +19469,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.393700793314367</TD>
-      <TD>0.08835017696478485</TD>
+      <TD>0.034783534760500515</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -18681,8 +19493,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.47736904</TD>
-      <TD/>
+      <TD>0.11934226</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18704,8 +19517,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0738179</TD>
-      <TD/>
+      <TD>0.268454475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>53904667</TD>
       <TD>E</TD>
       <TD>3.SE</TD>
@@ -18727,8 +19541,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.91675797</TD>
-      <TD/>
+      <TD>0.2291894925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18750,8 +19565,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.1533643</TD>
-      <TD/>
+      <TD>0.288341075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>C</TD>
       <TD/>
@@ -18773,8 +19589,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.138312586080484</TD>
-      <TD>0.004591288890835297</TD>
+      <TD>0.0006350330399340269</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -18796,8 +19613,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.054259358841094</TD>
-      <TD>0.0012365127676057708</TD>
+      <TD>6.709238996911578e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>14401412</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -18819,8 +19637,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55527016</TD>
-      <TD/>
+      <TD>0.13881754</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18842,8 +19661,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.40958624</TD>
-      <TD/>
+      <TD>0.10239656</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>78200427</TD>
       <TD>S</TD>
       <TD>2.SEa</TD>
@@ -18865,8 +19685,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0326946</TD>
-      <TD/>
+      <TD>0.25817365</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18888,8 +19709,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.30119338</TD>
-      <TD/>
+      <TD>0.075298345</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18911,8 +19733,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.48505726</TD>
-      <TD/>
+      <TD>0.121264315</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>U</TD>
       <TD/>
@@ -18934,8 +19757,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.2227171605737</TD>
-      <TD>0.02480146740536424</TD>
+      <TD>0.005523712398583894</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -18957,8 +19781,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.48792313</TD>
-      <TD/>
+      <TD>0.1219807825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -18980,8 +19805,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>0.48790275</TD>
-      <TD/>
+      <TD>0.1219756875</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD/>
       <TD/>
@@ -19003,8 +19829,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.060096156050468</TD>
-      <TD>0.0005417322275992882</TD>
+      <TD>3.2556024487374474e-05</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>5602595</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -19026,8 +19853,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.62146099</TD>
-      <TD/>
+      <TD>0.1553652475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19049,8 +19877,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.48056404</TD>
-      <TD/>
+      <TD>0.12014101</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>41500123</TD>
       <TD>E</TD>
       <TD>2.SEa</TD>
@@ -19072,8 +19901,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.165289250987368</TD>
-      <TD>0.022129634975255694</TD>
+      <TD>0.0036577907896838753</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19095,8 +19925,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.23980814908971</TD>
-      <TD>0.019552703026280618</TD>
+      <TD>0.004688897522433126</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>37600306</TD>
       <TD>S</TD>
       <TD>1.NO</TD>
@@ -19118,8 +19949,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.249376544369636</TD>
-      <TD>0.03171621680274171</TD>
+      <TD>0.007909280546745914</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -19141,8 +19973,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.172413787433566</TD>
-      <TD>0.024673005332683642</TD>
+      <TD>0.004253966296776558</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -19164,8 +19997,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.39369386</TD>
-      <TD/>
+      <TD>0.098423465</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>F</TD>
       <TD/>
@@ -19187,8 +20021,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0010659</TD>
-      <TD/>
+      <TD>0.250266475</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19210,8 +20045,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.187969918746772</TD>
-      <TD>0.013073094999762154</TD>
+      <TD>0.0024573486048741233</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -19233,8 +20069,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.172712</TD>
-      <TD/>
+      <TD>0.043178</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>S</TD>
       <TD/>
@@ -19256,8 +20093,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.58970994</TD>
-      <TD/>
+      <TD>0.147427485</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>37900867</TD>
       <TD>U</TD>
       <TD>4.CR</TD>
@@ -19279,8 +20117,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.37345717</TD>
-      <TD/>
+      <TD>0.0933642925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19302,8 +20141,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.0525845</TD>
-      <TD/>
+      <TD>0.263146125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>38202204</TD>
       <TD>E</TD>
       <TD>2.SEa:</TD>
@@ -19325,8 +20165,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.55179003</TD>
-      <TD/>
+      <TD>0.1379475075</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>38201201</TD>
       <TD>F</TD>
       <TD>2.SEa</TD>
@@ -19348,8 +20189,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.83285687</TD>
-      <TD/>
+      <TD>0.2082142175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19371,8 +20213,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>1.170224</TD>
-      <TD/>
+      <TD>0.292556</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>78200523</TD>
       <TD>C</TD>
       <TD>3.CR</TD>
@@ -19394,8 +20237,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.52560913</TD>
-      <TD/>
+      <TD>0.1314022825</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>38201557</TD>
       <TD>C</TD>
       <TD>3.CR</TD>
@@ -19417,8 +20261,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.46506958</TD>
-      <TD/>
+      <TD>0.116267395</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19440,8 +20285,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.214</TD>
-      <TD/>
+      <TD>0.011189542483660131</TD>
       <TD>M</TD>
+      <TD>9</TD>
       <TD>18100530</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -19463,8 +20309,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.49956286</TD>
-      <TD/>
+      <TD>0.124890715</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>42604702</TD>
       <TD>E</TD>
       <TD>2.SEc</TD>
@@ -19486,8 +20333,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.72513197</TD>
-      <TD/>
+      <TD>0.1812829925</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>10101714</TD>
       <TD>E</TD>
       <TD>2.SEap</TD>
@@ -19509,8 +20357,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.89934245</TD>
-      <TD/>
+      <TD>0.2248356125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19532,8 +20381,9 @@
       <TD>low</TD>
       <TD>0</TD>
       <TD>0.275482084978947</TD>
-      <TD>0.029597245763045742</TD>
+      <TD>0.008153510972438147</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD>37501937</TD>
       <TD>S</TD>
       <TD>1.NC</TD>
@@ -19555,8 +20405,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.71250356</TD>
-      <TD/>
+      <TD>0.17812589</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19578,8 +20429,9 @@
       <TD>intermediate</TD>
       <TD>0</TD>
       <TD>0.44121125</TD>
-      <TD/>
+      <TD>0.1103028125</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19601,8 +20453,9 @@
       <TD>extreme</TD>
       <TD>0</TD>
       <TD>1.6310047</TD>
-      <TD/>
+      <TD>0.407751175</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD>43700232</TD>
       <TD>A</TD>
       <TD>4.SB</TD>
@@ -19624,8 +20477,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.97462354</TD>
-      <TD/>
+      <TD>0.243655885</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19647,8 +20501,9 @@
       <TD>intermediate</TD>
       <TD>1</TD>
       <TD>0.176</TD>
-      <TD/>
+      <TD>0.06052910052910052</TD>
       <TD>M</TD>
+      <TD>10</TD>
       <TD>38300825</TD>
       <TD>E</TD>
       <TD>2.SEb</TD>
@@ -19670,8 +20525,9 @@
       <TD>high</TD>
       <TD>0</TD>
       <TD>0.73119039</TD>
-      <TD/>
+      <TD>0.1827975975</TD>
       <TD>L</TD>
+      <TD>1</TD>
       <TD/>
       <TD>E</TD>
       <TD/>
@@ -19693,8 +20549,9 @@
       <TD>very low</TD>
       <TD>0</TD>
       <TD>0.166944914559375</TD>
-      <TD>0.003065766327195523</TD>
+      <TD>0.0005118140975526655</TD>
       <TD>H</TD>
+      <TD>11; 14; 15</TD>
       <TD/>
       <TD/>
       <TD/>

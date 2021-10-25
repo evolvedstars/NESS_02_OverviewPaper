@@ -11,13 +11,14 @@
 import numpy as np
 from astropy.table import Table, MaskedColumn
 from astropy import units
-import subprocess, os
+import subprocess, os, warnings
 try:
     import cdspyreadme
 except:
     print("Package cdspyreadme not found, installing...")
     subprocess.run(['pip3', 'install', 'cdspyreadme'])
     import cdspyreadme
+warnings.filterwarnings("ignore", category=units.UnitsWarning) 
 
 def preptables():
     """ Table 3 """
@@ -33,9 +34,10 @@ def preptables():
             'JCMT/SCUBA2 450 um flux quality flag (-1 if flux is 3\sigma upper limit)', \
             'JCMT/SCUBA2 850 um flux', 'uncertainty in JCMT/SCUBA2 850 um flux', \
             'JCMT/SCUBA2 850 um flux quality flag (-1 if flux is 3\sigma upper limit)', \
-            'spectral index (see Section 4.4 in paper)', 'lower bound of 68\% confidence interval for spectral index', \
-            'upper bound of 68\% confidence interval for spectral index', \
-            'quality flag for confidence interval (-99, 0, 1)']
+            'spectral index (see Section 4.4 in paper)', 'lower bound of confidence interval for spectral index', \
+            'upper bound of confidence interval for spectral index', \
+            'quality flag for confidence interval (-99: not applicable, 0: 68% CI centred on alpha, ' + \
+            '1: 95% CI with alpha_ci_low a lower limit on alpha)']
     # u1 = units.def_unit('dimensionless', 1 * units.dimensionless_unscaled)
     u1 = units.dimensionless_unscaled
     u2 = units.Jy
